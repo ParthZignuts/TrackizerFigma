@@ -22,7 +22,8 @@ class SubscriptionsitemsScrollView extends StatelessWidget {
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(16.0),
                 side: const BorderSide(
-                  color: AppColor.purple,
+                  width: 5.0,
+                  color: Colors.white,
                 )
             ),
             leading: SizedBox(

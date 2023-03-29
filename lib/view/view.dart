@@ -13,3 +13,4 @@ export './widget/budget_sleek_circular_slider.dart';
 export './widget/active_subscontainer.dart';
 export './widget/subscriptions_items_scroll_view.dart';
 export './widget/upcoming_bills_list_view.dart';
+export './widget/animated_bottom_navigationbar.dart';
