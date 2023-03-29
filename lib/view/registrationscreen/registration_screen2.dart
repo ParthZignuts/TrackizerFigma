@@ -56,7 +56,7 @@ class RegistrationScreen2 extends StatelessWidget {
                       ? () => Get.snackbar(
                           'Failed', 'Please Enter Valid Credentials',
                           backgroundColor: AppColor.red)
-                      : () => Get.to( HomeScreen()),
+                      : () => Get.to( const HomeScreen()),
                   textStyle: TextStyles.h2NormalWhite,
                   imgSrc: 'assets/images/pointing-to-right.png'),
               const Spacer(),

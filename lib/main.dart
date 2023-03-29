@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
-import 'package:trackizer/view/homescreen/home_screen.dart';
+
+import './view/view.dart';
 import './provider/provider.dart';
 
 
@@ -24,8 +24,8 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.red,
         ),
-        // home: const WelcomeScreen(),
-        home:  HomeScreen(),
+        home:  const WelcomeScreen(),
+        // home:  HomeScreen(),
       ),
     );
   }

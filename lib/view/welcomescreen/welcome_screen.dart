@@ -32,7 +32,7 @@ class WelcomeScreen extends StatelessWidget {
                   const SizedBox(
                     height: 16,
                   ),
-                  CupertinoCustomButton(imgSrc: 'assets/images/student.png',color: AppColor.black, btnTitle: 'I Have An Account', onBtnPress:(){print('have an account');},textStyle: TextStyles.h2Bold),
+                  CupertinoCustomButton(imgSrc: 'assets/images/student.png',color: AppColor.black, btnTitle: 'I Have An Account', onBtnPress:()=>Get.to(const LoginScreen()),textStyle: TextStyles.h2Bold),
 
                 ],
               ),

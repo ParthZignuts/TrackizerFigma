@@ -1,5 +1,4 @@
 import 'package:trackizer/view/homescreen/home_screen.dart';
-
 import '../view.dart';
 import '../../provider/provider.dart';
 
@@ -25,7 +24,6 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     TextEditingController controller = TextEditingController();
     final passStrengthProvider = Provider.of<PasswordStrengthProvider>(context);
-    double passStrength = passStrengthProvider.strength;
     return Scaffold(
       body: Container(
         color: AppColor.black,
@@ -70,7 +68,7 @@ class _LoginScreenState extends State<LoginScreen> {
               CupertinoCustomButton(
                   color: Colors.redAccent,
                   btnTitle: 'Sign In',
-                  onBtnPress: () => Get.to( HomeScreen()),
+                  onBtnPress: () => Get.to( const HomeScreen()),
                   textStyle: TextStyles.h2NormalWhite,
                   imgSrc: 'assets/images/pointing-to-right.png'),
               const Spacer(),

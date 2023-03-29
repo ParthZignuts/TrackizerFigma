@@ -84,6 +84,7 @@ class HomeScreen extends StatelessWidget {
                       homeScreenProvider.changeGroupValue(value!);
                     }),
               ),
+              const SizedBox(height: 8.0,),
               showWidgetOnSwitchTab[homeScreenProvider.groupValue],
             ],
           ),

@@ -9,7 +9,7 @@ class BudgetSleekCircularSlider extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SleekCircularSlider(
-      innerWidget: (percentage) => logoImage,
+      innerWidget: (percentage) => centerDetails,
       appearance: CircularSliderAppearance(
           size: 300,
           customWidths:
@@ -26,12 +26,12 @@ class BudgetSleekCircularSlider extends StatelessWidget {
           ),
           infoProperties: InfoProperties(bottomLabelText: 'See Your Budget')),
       initialValue: 5,
-      onChange: (value) => print(value),
+      onChange: (value) => (){},
     );
   }
 }
 
-Widget logoImage = Column(
+Widget centerDetails = Column(
   mainAxisAlignment: MainAxisAlignment.center,
   children: [
     Image.asset('assets/images/logo.png'),
