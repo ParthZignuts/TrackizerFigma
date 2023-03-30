@@ -17,15 +17,17 @@ class MyApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider<PasswordStrengthProvider>( create: (context) => PasswordStrengthProvider()),
         ChangeNotifierProvider<HomeScreenProvider>( create: (context) => HomeScreenProvider()),
+        ChangeNotifierProvider<TrackizerScreenProvider>( create: (context) => TrackizerScreenProvider()),
       ],
       child: GetMaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'Flutter Demo',
+        title: 'Trackizer',
         theme: ThemeData(
           primarySwatch: Colors.red,
         ),
-        home:  const WelcomeScreen(),
-        // home:  HomeScreen(),
+        // home:  const WelcomeScreen(),
+        // home:  const HomeScreen(),
+        home:  const Trackizer(),
       ),
     );
   }

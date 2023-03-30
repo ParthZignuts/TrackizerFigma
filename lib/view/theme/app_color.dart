@@ -15,12 +15,14 @@ class AppColor {
 
   static const offWhite = Color(0xFF212020);
   static const white = Color(0xFFFFFFFF);
+  static const lightWhite = Color(0xFFD2CECE);
 
-  static const red = Color(0xFFFC4545);
-  static const redAccent = Color(0xFFD34B4B);
+  static const red = Color(0xFFBD0000);
+  static const redAccent = Color(0xFFFF0000);
 
   static const green = Color(0xFF3CCF4E);
   static const blue = Color(0xFF1861FF);
 
   static const deepBlue=Color(0xFF4D19A9);
+  static const cyan=Color(0xFF02FAFA);
 }

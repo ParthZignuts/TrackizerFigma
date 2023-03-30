@@ -59,24 +59,7 @@ class HomeScreen extends StatelessWidget {
               ),
               SizedBox(
                 width: MediaQuery.of(context).size.width * 0.9,
-                child: CupertinoSlidingSegmentedControl<int>(
-                    backgroundColor: AppColor.black,
-                    thumbColor: AppColor.bgBlack,
-                    padding: const EdgeInsets.all(8),
-                    groupValue: homeScreenProvider.groupValue,
-                    children: const {
-                      0: Text(
-                        'Your subscriptions',
-                        style: TextStyles.h2NormalWhite,
-                      ),
-                      1: Text(
-                        'Upcoming Bills',
-                        style: TextStyles.h2NormalWhite,
-                      ),
-                    },
-                    onValueChanged: (value) {
-                      homeScreenProvider.changeGroupValue(value!);
-                    }),
+                child: CupertinoSlidingSegmentedControlHomeScreen(homeScreenProvider: homeScreenProvider),
               ),
               const SizedBox(
                 height: 8.0,
@@ -86,7 +69,7 @@ class HomeScreen extends StatelessWidget {
           ),
         ),
       ),
-      bottomNavigationBar: const AnimatedBottomNavigationbar(),
+      // bottomNavigationBar: const AnimatedBottomNavigationbar(),
     );
   }
 }

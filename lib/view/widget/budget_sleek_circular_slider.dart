@@ -1,3 +1,4 @@
+import 'package:get/get.dart';
 import 'package:sleek_circular_slider/sleek_circular_slider.dart';
 import '../view.dart';
 
@@ -53,7 +54,7 @@ Widget centerDetails = Column(
       height: 16,
     ),
     ElevatedButton(
-      onPressed: () {},
+      onPressed: () => Get.to(const SpendingAndBudgetScreen()),
       style: ElevatedButton.styleFrom(
         backgroundColor: AppColor.deepBlue,
       ),

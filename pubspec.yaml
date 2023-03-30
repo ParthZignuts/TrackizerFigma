@@ -40,6 +40,9 @@ dependencies:
   sleek_circular_slider: ^2.0.1
   lottie: ^2.3.1
   curved_navigation_bar: ^1.0.3
+  gauges: ^1.0.0
+  syncfusion_flutter_gauges: ^21.1.37
+  dotted_border: ^2.0.0+3
 
 dev_dependencies:
   flutter_test:

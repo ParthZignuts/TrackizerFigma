@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:trackizer/view/theme/app_color.dart';
 
 class TextStyles {
   static const h1Bold = TextStyle(fontSize: 22, fontWeight: FontWeight.bold);
@@ -14,6 +15,8 @@ class TextStyles {
   static const h3Bold = TextStyle(fontSize: 18, fontWeight: FontWeight.bold);
   static const h3Normal = TextStyle(fontSize: 18, fontWeight: FontWeight.normal);
   static const h3NormalWhite = TextStyle(fontSize: 18, fontWeight: FontWeight.normal,color: Colors.white);
+  static const h3NormalLightWhite = TextStyle(fontSize: 18, fontWeight: FontWeight.normal,color: AppColor.lightWhite);
+
 
   static const p1Bold = TextStyle(fontSize: 16, fontWeight: FontWeight.bold);
   static const p1Normal = TextStyle(fontSize: 16, fontWeight: FontWeight.normal);
