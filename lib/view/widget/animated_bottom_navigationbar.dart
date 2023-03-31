@@ -16,7 +16,7 @@ class AnimatedBottomNavigationbar extends StatelessWidget {
     return CurvedNavigationBar(
       index: trackizerProvider.tabIndex,
       backgroundColor: AppColor.bgBlack,
-      color: AppColor.darkGray,
+      color: AppColor.navigationbarColor,
       animationDuration: const Duration(milliseconds: 300),
       items: const [
         Icon(Icons.home, color: AppColor.redAccent),

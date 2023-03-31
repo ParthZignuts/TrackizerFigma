@@ -28,7 +28,8 @@ class MyApp extends StatelessWidget {
         ),
         // home:  const WelcomeScreen(),
         // home:  const HomeScreen(),
-        home:   Trackizer(),
+        home:   const Trackizer(),
+        // home: const DetailedSubscriptionScreen(imgScr: 'assets/images/0.png', subTitle: 'SpotiFy',subAmount: '\$23.3'),
       ),
     );
   }

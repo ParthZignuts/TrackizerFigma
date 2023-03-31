@@ -16,7 +16,7 @@ class TitleRowForTitleAndSettingBtn extends StatelessWidget {
         SizedBox(width: MediaQuery.of(context).size.width * 0.1),
         Text(
           title,
-          style: TextStyles.h2NormalWhite,
+          style: TextStyles.h2NormalGreyTitle,
         ),
         IconButton(
             onPressed: () {},

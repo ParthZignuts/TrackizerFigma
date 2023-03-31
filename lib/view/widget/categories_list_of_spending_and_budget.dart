@@ -27,8 +27,8 @@ class CategoriesListOfSpendingAndBudget extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: Container(
                 decoration: BoxDecoration(
+                  color: AppColor.listTileDarkGrey,
                   borderRadius: BorderRadius.circular(16.0),
-                  border: Border.all(color: AppColor.lightWhite),
                 ),
                 child: Column(
                   children: [

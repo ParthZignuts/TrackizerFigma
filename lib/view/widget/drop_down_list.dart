@@ -1,4 +1,3 @@
-
 import '../../provider/calenderscreen/calenderscreen_provider.dart';
 import '../view.dart';
 
@@ -9,7 +8,6 @@ class DropDownList extends StatelessWidget {
   });
 
   final CalenderScreenProvider calenderProvider;
-
 
   @override
   Widget build(BuildContext context) {
@@ -29,38 +27,38 @@ class DropDownList extends StatelessWidget {
     ];
     return Container(
       height: 40,
-      decoration: BoxDecoration(
-        color: AppColor.grey,
-        borderRadius:
-        const BorderRadius.all(Radius.circular(16.0)),
-        border: Border.all(
-          color: AppColor.lightWhite,
-        ),
+      decoration: const BoxDecoration(
+        color: AppColor.darkGray,
+        borderRadius: BorderRadius.all(Radius.circular(16.0)),
+
       ),
       child: DropdownButtonHideUnderline(
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: DropdownButton(
-            dropdownColor: AppColor.lightBlack,
-            // Initial Value
-            value: calenderProvider.newValue,
-            style: TextStyles.h2NormalBlack,
+              dropdownColor: AppColor.lightBlack,
+              // Initial Value
+              value: calenderProvider.selectedValueOfMonth,
+              style: TextStyles.h2NormalBlack,
+              icon: const Icon(Icons.keyboard_arrow_down),
 
-            icon: const Icon(Icons.keyboard_arrow_down),
+              // Array list of items
+              items: items.map((String items) {
+                return DropdownMenuItem(
+                  value: items,
+                  child: Text(
+                    items,
+                    style: TextStyles.h3NormalWhite,
+                  ),
+                );
+              }).toList(),
+              onChanged: (String? newValue) {
+                calenderProvider.onDropDownItemChanged(newValue!);
+                calenderProvider.monthValue=items.indexOf(newValue)+1;
+                calenderProvider.dates.clear();
+                calenderProvider.getDatesWithDayNames();
 
-            // Array list of items
-            items: items.map((String items) {
-              return DropdownMenuItem(
-                value: items,
-                child: Text(
-                  items,
-                  style: TextStyles.h3NormalWhite,
-                ),
-              );
-            }).toList(),
-            onChanged: (String? newValue) => calenderProvider
-                .onDropDownItemChanged(newValue!),
-          ),
+              }),
         ),
       ),
     );

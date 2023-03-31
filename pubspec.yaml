@@ -43,6 +43,8 @@ dependencies:
   gauges: ^1.0.0
   syncfusion_flutter_gauges: ^21.1.37
   dotted_border: ^2.0.0+3
+  intl: ^0.18.0
+  ticket_widget: ^0.0.1
 
 dev_dependencies:
   flutter_test:
