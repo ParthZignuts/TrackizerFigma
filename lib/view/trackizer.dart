@@ -3,8 +3,8 @@ import '../provider/provider.dart';
 import './view.dart';
 
 class Trackizer extends StatelessWidget {
-  Trackizer({Key? key}) : super(key: key);
-  int pageIndex = 0;
+  const Trackizer({Key? key}) : super(key: key);
+
 
   @override
   Widget build(BuildContext context) {
