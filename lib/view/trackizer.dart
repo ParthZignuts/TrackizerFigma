@@ -3,7 +3,8 @@ import '../provider/provider.dart';
 import './view.dart';
 
 class Trackizer extends StatelessWidget {
-  const Trackizer({Key? key}) : super(key: key);
+  Trackizer({Key? key}) : super(key: key);
+  int pageIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -17,9 +18,16 @@ class Trackizer extends StatelessWidget {
             CalenderScreen(),
             PaymentScreen(),
           ],
-          onPageChanged: (int index) => trackizerProvider.onTabChanged(index)),
+          onPageChanged: (int index) => {
+                trackizerProvider.tabIndex = index,
+                trackizerProvider.onTabChanged(),
+              }),
       bottomNavigationBar: AnimatedBottomNavigationbar(
-        onTabTap: (int index) => trackizerProvider.onTabChanged(index),
+        onTabTap: (int index) {
+          trackizerProvider.tabIndex = index;
+          trackizerProvider.onTabChanged();
+        },
+        trackizerProvider: trackizerProvider,
       ),
     );
   }

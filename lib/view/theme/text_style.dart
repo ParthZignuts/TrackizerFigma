@@ -6,6 +6,7 @@ class TextStyles {
   static const h1Normal = TextStyle(fontSize: 22, fontWeight: FontWeight.normal);
   static const h1BoldWhite = TextStyle(fontSize: 22, fontWeight: FontWeight.bold,color: Colors.white);
   static const h1BoldWhiteForPrice = TextStyle(fontSize: 30, fontWeight: FontWeight.bold,color: Colors.white);
+  static const h1BoldWhiteTitle = TextStyle(fontSize: 40, fontWeight: FontWeight.bold,color: Colors.white);
 
   static const h2Bold = TextStyle(fontSize: 20, fontWeight: FontWeight.bold);
   static const h2NormalWhite = TextStyle(fontSize: 20, fontWeight: FontWeight.normal,color: Colors.white);

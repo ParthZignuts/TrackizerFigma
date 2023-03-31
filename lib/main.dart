@@ -18,6 +18,7 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider<PasswordStrengthProvider>( create: (context) => PasswordStrengthProvider()),
         ChangeNotifierProvider<HomeScreenProvider>( create: (context) => HomeScreenProvider()),
         ChangeNotifierProvider<TrackizerScreenProvider>( create: (context) => TrackizerScreenProvider()),
+        ChangeNotifierProvider<CalenderScreenProvider>( create: (context) => CalenderScreenProvider()),
       ],
       child: GetMaterialApp(
         debugShowCheckedModeBanner: false,
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
         ),
         // home:  const WelcomeScreen(),
         // home:  const HomeScreen(),
-        home:  const Trackizer(),
+        home:   Trackizer(),
       ),
     );
   }

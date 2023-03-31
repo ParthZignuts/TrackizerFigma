@@ -25,22 +25,7 @@ class SpendingAndBudgetScreen extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: <Widget>[
-                SizedBox(width: MediaQuery.of(context).size.width * 0.1),
-                const Text(
-                  'Spending & Budgets ',
-                  style: TextStyles.h2NormalWhite,
-                ),
-                IconButton(
-                    onPressed: () {},
-                    icon: const Icon(
-                      Icons.settings,
-                      color: AppColor.white,
-                    )),
-              ],
-            ),
+            const TitleRowForTitleAndSettingBtn(title: 'Spending & Budgets '),
             const SpendingAndBudgetSemiCircleGraph(),
             const BudgetOnTrackBtn(),
             CategoriesListOfSpendingAndBudget(
@@ -50,7 +35,6 @@ class SpendingAndBudgetScreen extends StatelessWidget {
           ],
         ),
       ),
-      // bottomNavigationBar: const AnimatedBottomNavigationbar(),
     );
   }
 }

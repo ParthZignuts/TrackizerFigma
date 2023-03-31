@@ -1,7 +1,15 @@
 import 'package:flutter/cupertino.dart';
 
-class TrackizerScreenProvider extends ChangeNotifier{
-  PageController _pageController=PageController();
+class TrackizerScreenProvider extends ChangeNotifier {
+  int _tabIndex = 0;
+
+  int get tabIndex => _tabIndex;
+
+  set tabIndex(int value) {
+    _tabIndex = value;
+  }
+
+  PageController _pageController = PageController();
 
   PageController get pageController => _pageController;
 
@@ -9,8 +17,8 @@ class TrackizerScreenProvider extends ChangeNotifier{
     _pageController = value;
   }
 
-  void onTabChanged(int index){
-    _pageController.jumpToPage(index);
+  void onTabChanged() {
+    _pageController.jumpToPage(_tabIndex);
     notifyListeners();
   }
 }
