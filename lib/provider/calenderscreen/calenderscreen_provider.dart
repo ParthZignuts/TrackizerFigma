@@ -2,53 +2,28 @@ import 'package:flutter/cupertino.dart';
 import 'package:intl/intl.dart';
 
 class CalenderScreenProvider extends ChangeNotifier {
-  String _selectedMonth = "January";
-
-  int _changeVisibility=0;
-
-  int _monthValue = 1;
-
-  String _currentSelectedDateAndDay='1 Jan';
-
-  String get currentSelectedDateAndDay => _currentSelectedDateAndDay;
-
-  set currentSelectedDateAndDay(String value) {
-    _currentSelectedDateAndDay = value;
-  }
-
-  int get changeVisibility => _changeVisibility;
-
-  set changeVisibility(int value) {
-    _changeVisibility = value;
-  }
-
-
-
-  int get monthValue => _monthValue;
-
   List<String> dates = [];
 
-  set monthValue(int value) {
-    _monthValue = value;
-  }
+  String selectedMonth = "January";
 
-  String get selectedValueOfMonth => _selectedMonth;
+  int changeVisibility = 0;
 
-  set selectedValueOfMonth(String value) {
-    _selectedMonth = value;
-  }
+  int monthValue = 1;
 
+  String currentSelectedDateAndDay = '1 Jan';
+
+  // This Method is Called to Update The Selected Month name
   void onDropDownItemChanged(String value) {
-    selectedValueOfMonth = value;
+    selectedMonth = value;
     notifyListeners();
   }
-
+//This Method is used to generate the Dates and Day by passing selected monthvalue
   List<String> getDatesWithDayNames() {
     // Create a DateTime object for the first day of the month
-    DateTime firstDayOfMonth = DateTime(2023, _monthValue, 1);
+    DateTime firstDayOfMonth = DateTime(2023, monthValue, 1);
 
     // Determine the number of days in the month
-    int daysInMonth = DateTime(2023, _monthValue,0).day;
+    int daysInMonth = DateTime(2023, monthValue, 0).day;
 
     // Iterate over each day of the month and add the date with day name to the list
     for (int i = 0; i < daysInMonth; i++) {
@@ -60,15 +35,15 @@ class CalenderScreenProvider extends ChangeNotifier {
     notifyListeners();
     return dates;
   }
-
-  void onTapChangeVisibility(int value){
+//This Function will be used to change the currently selected values giving by getDatesWithDayNames
+  void onTapChangeVisibility(int value) {
     updateCurrentSelectedDayAndDate(dates[value]);
-     _changeVisibility=value;
+    changeVisibility = value;
     notifyListeners();
   }
 
-  void updateCurrentSelectedDayAndDate(String value){
-    _currentSelectedDateAndDay= value;
+  void updateCurrentSelectedDayAndDate(String value) {
+    currentSelectedDateAndDay = value;
     notifyListeners();
   }
 }

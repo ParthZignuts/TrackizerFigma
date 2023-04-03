@@ -21,14 +21,14 @@ class CalenderScreen extends StatelessWidget {
       '\$49.98'
     ];
     final calenderProvider = Provider.of<CalenderScreenProvider>(context);
-    calenderProvider.getDatesWithDayNames();
     List<String> datesList = calenderProvider.dates;
+
     return Scaffold(
       backgroundColor: AppColor.bgBlack,
       body: Column(
         children: [
           Container(
-            height: MediaQuery.of(context).size.height * 0.5,
+            height: 380.h,
             decoration: const BoxDecoration(
               color: AppColor.listTileDarkGrey,
               borderRadius: BorderRadius.only(
@@ -41,15 +41,18 @@ class CalenderScreen extends StatelessWidget {
                   const TitleRowForTitleAndSettingBtn(title: 'Calender'),
                   const CalenderTopTitle(),
                   Padding(
-                    padding: const EdgeInsets.only(left: 16.0, right: 16.0),
+                    padding: EdgeInsets.only(left: 12.0.sp, right: 8.0.sp),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        const Text(
+                        Text(
                           '3 subscriptions for today',
                           style: TextStyles.h3NormalWhite,
                         ),
-                        DropDownList(calenderProvider: calenderProvider),
+                        Flexible(
+                          child:
+                              DropDownList(calenderProvider: calenderProvider),
+                        ),
                       ],
                     ),
                   ),
@@ -61,7 +64,9 @@ class CalenderScreen extends StatelessWidget {
           ),
           SelectedDateDayAndTotalBudgetContainer(
               calenderProvider: calenderProvider),
-          CalenderBottomSubsGridView(subscriptions: subscriptions, subscriptionsPrices: subscriptionsPrices)
+          CalenderBottomSubsGridView(
+              subscriptions: subscriptions,
+              subscriptionsPrices: subscriptionsPrices),
         ],
       ),
     );

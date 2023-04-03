@@ -1,6 +1,4 @@
-
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 
 import '../view.dart';
 
@@ -18,7 +16,7 @@ class CalenderBottomSubsGridView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: Padding(
-        padding: const EdgeInsets.only( left: 15.0, right: 10.0),
+        padding:  EdgeInsets.only( left: 15.0.sp, right: 10.0.sp),
         child: GridView.builder(
           itemCount: subscriptions.length,
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
@@ -31,52 +29,48 @@ class CalenderBottomSubsGridView extends StatelessWidget {
                 Get.to(DetailedSubscriptionScreen(imgScr: 'assets/images/$index.png', subTitle: '${subscriptions[index]}', subAmount: '${subscriptionsPrices[index]}'));
               },
               child: Padding(
-                padding: const EdgeInsets.all(3.0),
+                padding:  EdgeInsets.all(3.0.sp),
                 child: Container(
                   decoration: BoxDecoration(
                     color: AppColor.listTileDarkGrey,
                     borderRadius: BorderRadius.circular(24.0),
 
                   ),
-                  child: Expanded(
-                    child: Column(
-                      children: [
-                        Padding(
-                          padding:
-                          const EdgeInsets.only(top: 20.0, left: 15.0),
-                          child: Align(
-                            alignment: Alignment.topLeft,
-                            child: Expanded(
-                              child: SizedBox(
-                                  height: 40,
-                                  width: 40,
-                                  child:
-                                  Image.asset('assets/images/$index.png')),
-                            ),
+                  child: Column(
+                    children: [
+                      Padding(
+                        padding:
+                         EdgeInsets.only(top: 20.0.sp, left: 15.0.sp),
+                        child: Align(
+                          alignment: Alignment.topLeft,
+                          child: SizedBox(
+                              height: 40.h,
+                              width: 40.w,
+                              child:
+                              Image.asset('assets/images/$index.png')),
+                        ),
+                      ),
+                      Padding(
+                        padding:  EdgeInsets.only(top: 25.sp, left: 15.0.sp),
+                        child: Align(
+                          alignment: Alignment.topLeft,
+                          child: Text(
+                            subscriptions[index],
+                            style: TextStyles.h2BoldWhite,
                           ),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 30, left: 15.0),
-                          child: Align(
-                            alignment: Alignment.topLeft,
-                            child: Text(
-                              subscriptions[index],
-                              style: TextStyles.h1BoldWhite,
-                            ),
+                      ),
+                      Padding(
+                        padding:  EdgeInsets.only(top: 4.sp, left: 15.0.sp),
+                        child: Align(
+                          alignment: Alignment.topLeft,
+                          child: Text(
+                            subscriptionsPrices[index],
+                            style: TextStyles.h2NormalWhite,
                           ),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 4, left: 15.0),
-                          child: Align(
-                            alignment: Alignment.topLeft,
-                            child: Text(
-                              subscriptionsPrices[index],
-                              style: TextStyles.h2NormalWhite,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
                 ),
               ),

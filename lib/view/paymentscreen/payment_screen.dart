@@ -16,13 +16,13 @@ class PaymentScreen extends StatelessWidget {
           children: [
             const TitleRowForTitleAndSettingBtn(title: 'CreditCards'),
             Padding(
-              padding: const EdgeInsets.only(top: 30.0),
+              padding: const EdgeInsets.only(top: 10.0),
               child: Align(
                   alignment: Alignment.center,
                   child: Image.asset('assets/images/Credit Cards.png')),
             ),
-            const Padding(
-              padding: EdgeInsets.only(top: 20.0),
+             Padding(
+              padding: EdgeInsets.only(top: 10.0.sp),
               child: Text(
                 'Subscriptions',
                 style: TextStyles.h1BoldWhite,
@@ -37,8 +37,8 @@ class PaymentScreen extends StatelessWidget {
                   return Row(
                     children: [
                       SizedBox(
-                        width: 45,
-                        height: 45,
+                        width: 45.w,
+                        height: 45.h,
                         child: Image.asset('assets/images/$index.png'),
                       ),
                     ],
@@ -62,17 +62,16 @@ class PaymentScreen extends StatelessWidget {
                     ),
                   ),
                   child: Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding:  EdgeInsets.all(8.0.sp),
                     child: DottedBorder(
                       borderType: BorderType.RRect,
                       color: AppColor.lightWhite,
                       radius: const Radius.circular(16.0),
-                      child: Padding(
-                        padding: const EdgeInsets.all(35.0),
+                      child: Center(
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            const Text(
+                             Text(
                               'Add New Category  ',
                               style: TextStyles.h2NormalWhite,
                             ),

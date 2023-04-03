@@ -1,4 +1,3 @@
-
 import 'package:flutter/cupertino.dart';
 import '../../provider/provider.dart';
 import '../view.dart';
@@ -32,7 +31,8 @@ class HomeScreen extends StatelessWidget {
 
     final homeScreenProvider = Provider.of<HomeScreenProvider>(context);
     return Scaffold(
-      body: Container(
+      backgroundColor: AppColor.bgBlack,
+      body:Container(
         color: AppColor.bgBlack,
         child: SafeArea(
           child: Column(
@@ -58,7 +58,7 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
               SizedBox(
-                width: MediaQuery.of(context).size.width * 0.9,
+                width: 340.w,
                 child: CupertinoSlidingSegmentedControlHomeScreen(homeScreenProvider: homeScreenProvider),
               ),
               const SizedBox(
@@ -69,7 +69,27 @@ class HomeScreen extends StatelessWidget {
           ),
         ),
       ),
-      // bottomNavigationBar: const AnimatedBottomNavigationbar(),
     );
   }
 }
+
+// Container(
+// color: AppColor.bgBlack,
+// child: SafeArea(
+// child: Column(
+// children: [
+// Align(
+// alignment: Alignment.topRight,
+// child: IconButton(
+// onPressed: () {},
+// icon: const Icon(
+// Icons.settings,
+// color: Colors.white,
+// )),
+// ),
+// const BudgetSleekCircularSlider(),
+
+// ],
+// ),
+// ),
+// // ),

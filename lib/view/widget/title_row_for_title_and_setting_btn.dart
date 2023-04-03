@@ -1,4 +1,5 @@
 
+
 import '../view.dart';
 
 class TitleRowForTitleAndSettingBtn extends StatelessWidget {
@@ -13,7 +14,7 @@ class TitleRowForTitleAndSettingBtn extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
-        SizedBox(width: MediaQuery.of(context).size.width * 0.1),
+        SizedBox(width: 30.w),
         Text(
           title,
           style: TextStyles.h2NormalGreyTitle,

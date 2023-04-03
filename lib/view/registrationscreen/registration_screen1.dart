@@ -17,7 +17,7 @@ class RegistrationScreen1 extends StatelessWidget {
               Align(
                   alignment: Alignment.center,
                   child: Image.asset('assets/images/logo.png')),
-              Spacer(),
+              const Spacer(),
               CupertinoCustomButton(
                   imgSrc: 'assets/images/apple-logo.png',
                   color: AppColor.lightBlack,
@@ -39,7 +39,7 @@ class RegistrationScreen1 extends StatelessWidget {
               const SizedBox(
                 height: 16,
               ),
-              const Align(
+               Align(
                 alignment: Alignment.center,
                 child: Text(
                   'or',
@@ -53,11 +53,11 @@ class RegistrationScreen1 extends StatelessWidget {
                   imgSrc: 'assets/images/gmail.png',
                   color: AppColor.redAccent,
                   btnTitle: 'Sign Up With Email',
-                  onBtnPress: () => Get.to(const RegistrationScreen2()),
+                  onBtnPress: () => Get.offAll(const RegistrationScreen2()),
                   textStyle: TextStyles.h2NormalBlack),
-              const Text(
+               Text(
                 'By registering, you agree to our Terms of Use. Learn\n            how we collect, use and share your data.',
-                style: TextStyles.h3NormalWhite,
+                style: TextStyles.h2NormalWhite,
               ),
             ],
           ),

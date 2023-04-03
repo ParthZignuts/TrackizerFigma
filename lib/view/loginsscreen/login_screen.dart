@@ -25,64 +25,68 @@ class _LoginScreenState extends State<LoginScreen> {
     TextEditingController controller = TextEditingController();
     final passStrengthProvider = Provider.of<PasswordStrengthProvider>(context);
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Container(
         color: AppColor.black,
         child: SafeArea(
-          child: Column(
-            children: [
-              Align(
-                  alignment: Alignment.center,
-                  child: Image.asset('assets/images/logo.png')),
-              const Spacer(),
-              CustomTextFormField(
-                  controller: controller,
-                  labelText: 'Email',
-                  hintText: 'Enter Email'),
+          child: Padding(
+            padding:  EdgeInsets.all(8.0.sp),
+            child: Column(
+              children: [
+                Align(
+                    alignment: Alignment.center,
+                    child: Image.asset('assets/images/logo.png')),
+                const Spacer(),
+                CustomTextFormField(
+                    controller: controller,
+                    labelText: 'Email',
+                    hintText: 'Enter Email'),
 
-              const SizedBox(height: 16.0),
+                const SizedBox(height: 16.0),
 
-              PasswordTextFormField(passStrengthProvider: passStrengthProvider),
-              const SizedBox(
-                height: 16,
-              ),
-              // The strength indicator bar
-
-              // The message about the strength of the entered password
-              Align(
-                alignment: Alignment.topLeft,
-                child: Row(
-                  children: [
-                    Checkbox(
-                      value: rememberMe,
-                      onChanged: _onRememberMeChanged,
-                      fillColor: MaterialStateProperty.all(AppColor.redAccent),
-                    ),
-                    const Text('Remember Me',style: TextStyles.h2NormalWhite,),
-                    const Spacer(),
-                    const Text('Forgot Password',style:  TextStyles.h2NormalWhite,),
-                  ],
+                PasswordTextFormField(passStrengthProvider: passStrengthProvider),
+                const SizedBox(
+                  height: 16,
                 ),
-              ),
-              const SizedBox(height: 16.0),
+                // The strength indicator bar
 
-              CupertinoCustomButton(
-                  color: Colors.redAccent,
-                  btnTitle: 'Sign In',
-                  onBtnPress: () => Get.to( const HomeScreen()),
-                  textStyle: TextStyles.h2NormalWhite,
-                  imgSrc: 'assets/images/pointing-to-right.png'),
-              const Spacer(),
-              const Text(
-                'If You Don\'t Have An Account Yet?',
-                style: TextStyles.h2NormalWhite,
-              ),
-              CupertinoCustomButton(
-                  color: AppColor.deepBlue,
-                  btnTitle: 'Sign Up',
-                  onBtnPress: () => Get.to(const RegistrationScreen1()),
-                  textStyle: TextStyles.h2NormalWhite,
-                  imgSrc: 'assets/images/signin.png'),
-            ],
+                // The message about the strength of the entered password
+                Align(
+                  alignment: Alignment.topLeft,
+                  child: Row(
+                    children: [
+                      Checkbox(
+                        value: rememberMe,
+                        onChanged: _onRememberMeChanged,
+                        fillColor: MaterialStateProperty.all(AppColor.redAccent),
+                      ),
+                       Text('Remember Me',style: TextStyles.h2NormalWhite,),
+                      const Spacer(),
+                       Text('Forgot Password',style:  TextStyles.h2NormalWhite,),
+                    ],
+                  ),
+                ),
+                const SizedBox(height: 16.0),
+
+                CupertinoCustomButton(
+                    color: Colors.redAccent,
+                    btnTitle: 'Sign In',
+                    onBtnPress: () => Get.offAll( const Trackizer()),
+                    textStyle: TextStyles.h2NormalWhite,
+                    imgSrc: 'assets/images/pointing-to-right.png'),
+                const Spacer(),
+                 Text(
+                  'If You Don\'t Have An Account Yet?',
+                  style: TextStyles.h2NormalWhite,
+                ),
+                CupertinoCustomButton(
+                    color: AppColor.deepBlue,
+                    btnTitle: 'Sign Up',
+                    onBtnPress: () => Get.offAll(const RegistrationScreen1()),
+                    textStyle: TextStyles.h2NormalWhite,
+                    imgSrc: 'assets/images/signin.png'),
+              ],
+            ),
           ),
         ),
       ),

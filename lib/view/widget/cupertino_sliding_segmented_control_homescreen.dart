@@ -16,9 +16,9 @@ class CupertinoSlidingSegmentedControlHomeScreen extends StatelessWidget {
     return CupertinoSlidingSegmentedControl<int>(
         backgroundColor: AppColor.black,
         thumbColor: AppColor.bgBlack,
-        padding: const EdgeInsets.all(8),
+        padding:  EdgeInsets.all(7.sp),
         groupValue: homeScreenProvider.groupValue,
-        children: const {
+        children:  {
           0: Text(
             'Your subscriptions',
             style: TextStyles.h2NormalWhite,

@@ -2,7 +2,7 @@ import '../../provider/calenderscreen/calenderscreen_provider.dart';
 import '../view.dart';
 
 class ListViewOfDayAndDate extends StatelessWidget {
-  ListViewOfDayAndDate({
+  const ListViewOfDayAndDate({
     super.key,
     required this.datesList,
     required this.calenderProvider,
@@ -20,9 +20,9 @@ class ListViewOfDayAndDate extends StatelessWidget {
         itemCount: datesList.length,
         itemBuilder: (context, index) {
           return Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding:  EdgeInsets.all(8.0.sp),
             child: SizedBox(
-              width: MediaQuery.of(context).size.width * 0.2,
+              width: 60.w,
               child: GestureDetector(
                 onTap: () {
                   calenderProvider.onTapChangeVisibility(index);
@@ -30,16 +30,18 @@ class ListViewOfDayAndDate extends StatelessWidget {
                 child: Container(
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
-                      color: AppColor.listTileDarkGrey,
-                      borderRadius: BorderRadius.circular(24.0),
-                      ),
+                    color: AppColor.listTileDarkGrey,
+                    borderRadius: BorderRadius.circular(24.0),
+                  ),
                   child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Visibility(
                           visible: calenderProvider.changeVisibility == index,
                           child: SizedBox(
-                            height: 10,
-                            width: 10,
+                            height: 8.h,
+                            width: 8.w,
                             child: Container(
                               decoration: const BoxDecoration(
                                 color: AppColor.redAccent,
@@ -48,7 +50,6 @@ class ListViewOfDayAndDate extends StatelessWidget {
                             ),
                           )),
                       Wrap(
-                        runSpacing: 30,
                         direction: Axis.vertical,
                         alignment: WrapAlignment.center,
                         children: datesList[index]

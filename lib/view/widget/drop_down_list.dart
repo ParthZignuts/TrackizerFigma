@@ -1,3 +1,5 @@
+
+
 import '../../provider/calenderscreen/calenderscreen_provider.dart';
 import '../view.dart';
 
@@ -26,7 +28,7 @@ class DropDownList extends StatelessWidget {
       'December',
     ];
     return Container(
-      height: 40,
+      height: 40.h,
       decoration: const BoxDecoration(
         color: AppColor.darkGray,
         borderRadius: BorderRadius.all(Radius.circular(16.0)),
@@ -34,11 +36,11 @@ class DropDownList extends StatelessWidget {
       ),
       child: DropdownButtonHideUnderline(
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding:  EdgeInsets.all(8.0.sp),
           child: DropdownButton(
               dropdownColor: AppColor.lightBlack,
               // Initial Value
-              value: calenderProvider.selectedValueOfMonth,
+              value: calenderProvider.selectedMonth,
               style: TextStyles.h2NormalBlack,
               icon: const Icon(Icons.keyboard_arrow_down),
 
@@ -54,10 +56,9 @@ class DropDownList extends StatelessWidget {
               }).toList(),
               onChanged: (String? newValue) {
                 calenderProvider.onDropDownItemChanged(newValue!);
-                calenderProvider.monthValue=items.indexOf(newValue)+1;
-                calenderProvider.dates.clear();
-                calenderProvider.getDatesWithDayNames();
-
+                calenderProvider.monthValue=items.indexOf(newValue)+1; //passing selected month index value from dropdown to change the Date and Day listview
+                calenderProvider.dates.clear();  // For Clearing old generated data
+                calenderProvider.getDatesWithDayNames(); // get updated month value
               }),
         ),
       ),

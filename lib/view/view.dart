@@ -29,3 +29,4 @@ export './widget/lsitview_of_date_and_day.dart';
 export './widget/selected_date_day_and_totalbudget_container.dart';
 export './widget/calender_bottom_subs_gridview.dart';
 export './detailedsubscriptionscreen/detailed_subscription_screen.dart';
+export  'package:flutter_screenutil/flutter_screenutil.dart';
