@@ -1,4 +1,5 @@
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:trackizer/view/sliverscreens/sliver_home_screen.dart';
 
 import './view/view.dart';
 import './provider/provider.dart';
@@ -35,8 +36,9 @@ class MyApp extends StatelessWidget {
             ),
             // home:  const WelcomeScreen(),
             // home:  const HomeScreen(),
-            home: const Trackizer(),
+            // home: const Trackizer(),
             // home: const DetailedSubscriptionScreen(imgScr: 'assets/images/0.png', subTitle: 'SpotiFy',subAmount: '\$23.3'),
+            home: const SliverHomeScreen(),
           );
         },
       ),
