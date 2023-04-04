@@ -1,5 +1,4 @@
 import 'package:trackizer/view/homescreen/home_screen.dart';
-
 import '../view.dart';
 import '../../provider/provider.dart';
 
@@ -18,7 +17,7 @@ class RegistrationScreen2 extends StatelessWidget {
         color: AppColor.black,
         child: SafeArea(
           child: Padding(
-            padding:  EdgeInsets.all(8.0.sp),
+            padding: EdgeInsets.all(8.0.sp),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               children: [
@@ -33,8 +32,9 @@ class RegistrationScreen2 extends StatelessWidget {
 
                 const SizedBox(height: 16.0),
 
-                PasswordTextFormField(passStrengthProvider: passStrengthProvider),
-                 SizedBox(
+                PasswordTextFormField(
+                    passStrengthProvider: passStrengthProvider),
+                SizedBox(
                   height: 20.h,
                 ),
                 // The strength indicator bar
@@ -53,27 +53,27 @@ class RegistrationScreen2 extends StatelessWidget {
                 ),
 
                 const SizedBox(height: 16.0),
-                CupertinoCustomButton(
+                CustomButtonWithIcon(
                     color: Colors.redAccent,
-                    btnTitle: 'Get Started ,it\'s Free',
-                    onBtnPress: passStrength < 1 / 2
+                    title: 'Get Started ,it\'s Free',
+                    onPressed: passStrength < 1 / 2
                         ? () => Get.snackbar(
                             'Failed', 'Please Enter Valid Credentials',
                             backgroundColor: AppColor.red)
-                        : () => Get.offAll( const HomeScreen()),
+                        : () => Get.offAll(HomeScreen()),
                     textStyle: TextStyles.h2NormalWhite,
-                    imgSrc: 'assets/images/pointing-to-right.png'),
+                    iconPath: 'assets/images/pointing-to-right.png'),
                 const Spacer(),
-                 Text(
+                Text(
                   'Do You Have Alread an Account',
                   style: TextStyles.h2NormalWhite,
                 ),
-                CupertinoCustomButton(
+                CustomButtonWithIcon(
                     color: AppColor.deepBlue,
-                    btnTitle: 'Sign In',
-                    onBtnPress: () => Get.offAll(const LoginScreen()),
+                    title: 'Sign In',
+                    onPressed: () => Get.offAll(const LoginScreen()),
                     textStyle: TextStyles.h2NormalWhite,
-                    imgSrc: 'assets/images/signin.png'),
+                    iconPath: 'assets/images/signin.png'),
               ],
             ),
           ),

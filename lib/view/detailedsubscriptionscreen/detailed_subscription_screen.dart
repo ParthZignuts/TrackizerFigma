@@ -1,9 +1,9 @@
-
 import 'package:lottie/lottie.dart';
 import 'package:ticket_widget/ticket_widget.dart';
 import 'package:trackizer/provider/provider.dart';
 
 import '../view.dart';
+import '../widget/dashed_seprator_line.dart';
 
 class DetailedSubscriptionScreen extends StatelessWidget {
   const DetailedSubscriptionScreen(
@@ -15,7 +15,6 @@ class DetailedSubscriptionScreen extends StatelessWidget {
 
   final String imgScr;
   final String subTitle;
-
   final String subAmount;
 
   @override
@@ -31,29 +30,12 @@ class DetailedSubscriptionScreen extends StatelessWidget {
             color: AppColor.listTileDarkGrey,
             child: Column(
               children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: <Widget>[
-                    SizedBox(width:35.w),
-                     Text(
-                      'Subscrption Info',
-                      style: TextStyles.h2NormalGreyTitle,
-                    ),
-                    IconButton(
-                        onPressed: () {},
-                        icon: const Icon(
-                          Icons.settings,
-                          color: AppColor.white,
-                        )),
-                  ],
-                ),
+                const TitleRowForTitleAndSettingBtn(title: 'Subscription Info'),
                 Padding(
-                  padding:  EdgeInsets.only(top: 35.0.sp),
+                  padding: EdgeInsets.only(top: 35.0.sp),
                   child: Column(
                     children: [
-                      SizedBox(
-                          width:100.w,
-                          child: Image.asset(imgScr)),
+                      SizedBox(width: 100.w, child: Image.asset(imgScr)),
                     ],
                   ),
                 ),
@@ -65,9 +47,14 @@ class DetailedSubscriptionScreen extends StatelessWidget {
                   ' $subAmount',
                   style: TextStyles.h2NormalWhite,
                 ),
-               const Spacer(),
+                const Spacer(),
+                const DashedSepratorLine(),
                 Padding(
-                  padding:  EdgeInsets.all(8.0.sp),
+                  padding: EdgeInsets.only(
+                      top: 13.0.sp,
+                      left: 8.0.sp,
+                      right: 8.0.sp,
+                      bottom: 8.0.sp),
                   child: Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(24.0),
@@ -77,90 +64,18 @@ class DetailedSubscriptionScreen extends StatelessWidget {
                       height: 250.h,
                       child: Column(
                         children: [
-                          SizedBox(
-                            height: 40.h,
-                            width: 300.sp,
-                            child: ListTile(
-                              title:  Text(
-                                'Name',
-                                style: TextStyles.h3NormalWhite,
-                              ),
-                              trailing: Text(
-                                subTitle,
-                                style: TextStyles.h2NormalGreyTitle,
-                              ),
-                            ),
-                          ),
-                           SizedBox(
-                            height: 40.h,
-                            width: 300.sp,
-                            child: ListTile(
-                              title: Text(
-                                'Description',
-                                style: TextStyles.h3NormalWhite,
-                              ),
-                              trailing: Text(
-                                'Music App',
-                                style: TextStyles.h2NormalGreyTitle,
-                              ),
-                            ),
-                          ),
-                           SizedBox(
-                            height: 40.h,
-                            width: 300.sp,
-                            child: ListTile(
-                              title: Text(
-                                'Category',
-                                style: TextStyles.h3NormalWhite,
-                              ),
-                              trailing: Text(
-                                'Entertainment',
-                                style: TextStyles.h2NormalGreyTitle,
-                              ),
-                            ),
-                          ),
-                           SizedBox(
-                            height: 40.h,
-                            width: 300.w,
-                            child: ListTile(
-                              title: Text(
-                                'First Payment',
-                                style: TextStyles.h3NormalWhite,
-                              ),
-                              trailing: Text(
-                                '08.02.20023',
-                                style: TextStyles.h2NormalGreyTitle,
-                              ),
-                            ),
-                          ),
-                           SizedBox(
-                            height: 40.h,
-                            width: 300.w,
-                            child: ListTile(
-                              title: Text(
-                                'Reminder',
-                                style: TextStyles.h3NormalWhite,
-                              ),
-                              trailing: Text(
-                                'Never',
-                                style: TextStyles.h2NormalGreyTitle,
-                              ),
-                            ),
-                          ),
-                           SizedBox(
-                            height: 40.h,
-                            width: 300.w,
-                            child: ListTile(
-                              title: Text(
-                                'Currency',
-                                style: TextStyles.h3NormalWhite,
-                              ),
-                              trailing: Text(
-                                'USD(\$)',
-                                style: TextStyles.h2NormalGreyTitle,
-                              ),
-                            ),
-                          ),
+                          SubscriptionAllInfo(
+                              title: 'Name', subTitle: subTitle),
+                          const SubscriptionAllInfo(
+                              title: 'Description', subTitle: 'Music App'),
+                          const SubscriptionAllInfo(
+                              title: 'Category', subTitle: 'Entertainment'),
+                          const SubscriptionAllInfo(
+                              title: 'First Payment', subTitle: '08.02.20023'),
+                          const SubscriptionAllInfo(
+                              title: 'Reminder', subTitle: 'Never'),
+                          const SubscriptionAllInfo(
+                              title: 'Currency', subTitle: 'USD(\$)'),
                         ],
                       ),
                     ),
@@ -182,7 +97,10 @@ class DetailedSubscriptionScreen extends StatelessWidget {
                       ),
                       onPressed: () {
                         Get.bottomSheet(
-                          Lottie.asset('assets/lottie/4964-check-mark-success-animation.json',repeat: false,),
+                          Lottie.asset(
+                            'assets/lottie/4964-check-mark-success-animation.json',
+                            repeat: false,
+                          ),
                         );
                       },
                       child: const Text('Save')),

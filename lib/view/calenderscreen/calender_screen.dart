@@ -2,24 +2,24 @@ import '../../provider/provider.dart';
 import '../view.dart';
 
 class CalenderScreen extends StatelessWidget {
-  const CalenderScreen({Key? key}) : super(key: key);
+   CalenderScreen({Key? key}) : super(key: key);
+  List subscriptions = [
+    'Spotify',
+    'YouTube Premium',
+    'Microsoft OneDrive',
+    'NetFlix',
+    'PhotoShop'
+  ];
+  List subscriptionsPrices = [
+    '\$5.99',
+    '\$18.99',
+    '\$29.99',
+    '\$35.99',
+    '\$49.98'
+  ];
 
   @override
   Widget build(BuildContext context) {
-    List subscriptions = [
-      'Spotify',
-      'YouTube Premium',
-      'Microsoft OneDrive',
-      'NetFlix',
-      'PhotoShop'
-    ];
-    List subscriptionsPrices = [
-      '\$5.99',
-      '\$18.99',
-      '\$29.99',
-      '\$35.99',
-      '\$49.98'
-    ];
     final calenderProvider = Provider.of<CalenderScreenProvider>(context);
     List<String> datesList = calenderProvider.dates;
 
@@ -49,10 +49,7 @@ class CalenderScreen extends StatelessWidget {
                           '3 subscriptions for today',
                           style: TextStyles.h3NormalWhite,
                         ),
-                        Flexible(
-                          child:
-                              DropDownList(calenderProvider: calenderProvider),
-                        ),
+                        DropDownList(calenderProvider: calenderProvider),
                       ],
                     ),
                   ),

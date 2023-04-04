@@ -1,4 +1,4 @@
-import 'package:trackizer/view/homescreen/home_screen.dart';
+
 import '../view.dart';
 import '../../provider/provider.dart';
 
@@ -15,7 +15,6 @@ class _LoginScreenState extends State<LoginScreen> {
 
   void _onRememberMeChanged(bool? newValue) => setState(() {
         rememberMe = newValue!;
-
         if (rememberMe) {
         } else {}
       });
@@ -68,23 +67,23 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 const SizedBox(height: 16.0),
 
-                CupertinoCustomButton(
+                CustomButtonWithIcon(
                     color: Colors.redAccent,
-                    btnTitle: 'Sign In',
-                    onBtnPress: () => Get.offAll( const Trackizer()),
+                    title: 'Sign In',
+                    onPressed: () => Get.offAll( const Trackizer()),
                     textStyle: TextStyles.h2NormalWhite,
-                    imgSrc: 'assets/images/pointing-to-right.png'),
+                    iconPath: 'assets/images/pointing-to-right.png'),
                 const Spacer(),
                  Text(
                   'If You Don\'t Have An Account Yet?',
                   style: TextStyles.h2NormalWhite,
                 ),
-                CupertinoCustomButton(
+                CustomButtonWithIcon(
                     color: AppColor.deepBlue,
-                    btnTitle: 'Sign Up',
-                    onBtnPress: () => Get.offAll(const RegistrationScreen1()),
+                    title: 'Sign Up',
+                    onPressed: () => Get.offAll(const RegistrationScreen1()),
                     textStyle: TextStyles.h2NormalWhite,
-                    imgSrc: 'assets/images/signin.png'),
+                    iconPath: 'assets/images/signin.png'),
               ],
             ),
           ),

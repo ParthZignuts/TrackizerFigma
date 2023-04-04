@@ -1,25 +1,26 @@
 import '../../provider/provider.dart';
 import '../view.dart';
 
+// ignore: must_be_immutable
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key}) : super(key: key);
-
+   HomeScreen({Key? key}) : super(key: key);
+  List subscriptions = [
+    'Spotify',
+    'YouTube Premium',
+    'Microsoft OneDrive',
+    'NetFlix',
+    'PhotoShop'
+  ];
+  List subscriptionsPrices = [
+    '\$5.99',
+    '\$18.99',
+    '\$29.99',
+    '\$35.99',
+    '\$49.98'
+  ];
   @override
   Widget build(BuildContext context) {
-    List subscriptions = [
-      'Spotify',
-      'YouTube Premium',
-      'Microsoft OneDrive',
-      'NetFlix',
-      'PhotoShop'
-    ];
-    List subscriptionsPrices = [
-      '\$5.99',
-      '\$18.99',
-      '\$29.99',
-      '\$35.99',
-      '\$49.98'
-    ];
+
     //It's For Showing list according to the Switching tabs
     List<Widget> showWidgetOnSwitchTab = [
       SubscriptionsitemsScrollView(
@@ -36,15 +37,7 @@ class HomeScreen extends StatelessWidget {
         child: SafeArea(
           child: Column(
             children: [
-              Align(
-                alignment: Alignment.topRight,
-                child: IconButton(
-                    onPressed: () {},
-                    icon: const Icon(
-                      Icons.settings,
-                      color: Colors.white,
-                    )),
-              ),
+           const TitleRowForTitleAndSettingBtn(title: ''),
               const BudgetSleekCircularSlider(),
               Row(
                 children: const [
@@ -71,24 +64,3 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
-
-// Container(
-// color: AppColor.bgBlack,
-// child: SafeArea(
-// child: Column(
-// children: [
-// Align(
-// alignment: Alignment.topRight,
-// child: IconButton(
-// onPressed: () {},
-// icon: const Icon(
-// Icons.settings,
-// color: Colors.white,
-// )),
-// ),
-// const BudgetSleekCircularSlider(),
-
-// ],
-// ),
-// ),
-// // ),

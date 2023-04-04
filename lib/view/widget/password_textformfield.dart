@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
+
 import '../../provider/passwordstrength/password_strength_provider.dart';
-import '../theme/app_color.dart';
+import '../view.dart';
 
 class PasswordTextFormField extends StatelessWidget {
   const PasswordTextFormField({

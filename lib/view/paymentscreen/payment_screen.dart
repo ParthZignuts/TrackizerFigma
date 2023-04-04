@@ -17,11 +17,9 @@ class PaymentScreen extends StatelessWidget {
             const TitleRowForTitleAndSettingBtn(title: 'CreditCards'),
             Padding(
               padding: const EdgeInsets.only(top: 10.0),
-              child: Align(
-                  alignment: Alignment.center,
-                  child: Image.asset('assets/images/Credit Cards.png')),
+              child: Image.asset('assets/images/Credit Cards.png'),
             ),
-             Padding(
+            Padding(
               padding: EdgeInsets.only(top: 10.0.sp),
               child: Text(
                 'Subscriptions',
@@ -46,13 +44,15 @@ class PaymentScreen extends StatelessWidget {
                 },
               ),
             ),
-            Expanded(
+            SizedBox(
+              height: 80.h,
               child: Container(
                 decoration: const BoxDecoration(
                   color: AppColor.listTileDarkGrey,
                   borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(24.0),
-                      topRight: Radius.circular(24.0)),
+                    topLeft: Radius.circular(24.0),
+                    topRight: Radius.circular(24.0),
+                  ),
                 ),
                 child: GestureDetector(
                   onTap: () => Get.bottomSheet(
@@ -61,25 +61,36 @@ class PaymentScreen extends StatelessWidget {
                       child: Lottie.asset('assets/lottie/97039-oh-no.json'),
                     ),
                   ),
-                  child: Padding(
-                    padding:  EdgeInsets.all(8.0.sp),
-                    child: DottedBorder(
-                      borderType: BorderType.RRect,
-                      color: AppColor.lightWhite,
-                      radius: const Radius.circular(16.0),
-                      child: Center(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                             Text(
-                              'Add New Category  ',
-                              style: TextStyles.h2NormalWhite,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.all(10.0.sp),
+                        child: DottedBorder(
+                          borderType: BorderType.RRect,
+                          color: AppColor.lightWhite,
+                          radius: const Radius.circular(16.0),
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Center(
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Text(
+                                      'Add New Category  ',
+                                      style: TextStyles.h2NormalWhite,
+                                    ),
+                                  ),
+                                  Image.asset('assets/images/Add.png'),
+                                ],
+                              ),
                             ),
-                            Image.asset('assets/images/Add.png'),
-                          ],
+                          ),
                         ),
                       ),
-                    ),
+                    ],
                   ),
                 ),
               ),

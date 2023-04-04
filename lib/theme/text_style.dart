@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:trackizer/view/theme/app_color.dart';
+
+import 'app_color.dart';
 
 class TextStyles {
   static final  h1BoldWhiteTitle = TextStyle(fontSize: 40.sp, fontWeight: FontWeight.bold,color: Colors.white);

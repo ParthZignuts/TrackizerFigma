@@ -25,11 +25,11 @@ class BudgetSleekCircularSlider extends StatelessWidget {
               ],
               dotColor: Colors.white,
               trackColor: Colors.red,
-              shadowMaxOpacity: 10.0,
+              shadowMaxOpacity: 0.9,
             ),
             infoProperties: InfoProperties(bottomLabelText: 'See Your Budget')),
         initialValue: 5,
-        onChange: (value) => (){},
+        onChange: (value) => () {},
       ),
     );
   }
@@ -42,29 +42,29 @@ Widget centerDetails = Column(
         height: 35.h,
         width: 250.w,
         child: Image.asset('assets/images/logo.png')),
-     SizedBox(
+    SizedBox(
       height: 16.h,
     ),
-     Text(
+    Text(
       '\$1,235',
       style: TextStyles.h1BoldWhiteForPrice,
     ),
-     SizedBox(
+    SizedBox(
       height: 16.h,
     ),
-     Text(
+    Text(
       'This Month Bills',
       style: TextStyles.h2NormalWhite,
     ),
-     SizedBox(
+    SizedBox(
       height: 16.h,
     ),
     ElevatedButton(
-      onPressed: () => Get.to(const SpendingAndBudgetScreen()),
+      onPressed: () => Get.to(SpendingAndBudgetScreen()),
       style: ElevatedButton.styleFrom(
         backgroundColor: AppColor.deepBlue,
       ),
-      child:  Text(
+      child: Text(
         'See Your Budget',
         style: TextStyles.h1BoldWhite,
       ),

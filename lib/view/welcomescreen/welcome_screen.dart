@@ -4,7 +4,17 @@ import '../view.dart';
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({Key? key}) : super(key: key);
 
-  @override
+  static const bottomPadding =
+      EdgeInsets.only(bottom: 15.0, left: 5.0, right: 5.0);
+  static const buttonHeight = SizedBox(height: 12.0);
+
+  Widget buildWelcomeMessage() {
+    return Text(
+      'Congue malesuada in ac justo, a tristique \n      leo massa. Arcu leo leo urna risus.',
+      style: TextStyles.h2NormalWhite,
+    );
+  }
+
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
@@ -16,31 +26,24 @@ class WelcomeScreen extends StatelessWidget {
         child: Align(
             alignment: Alignment.bottomCenter,
             child: Padding(
-              padding: EdgeInsets.only(bottom: 15.sp,left: 5.0.sp,right: 5.0),
+              padding: bottomPadding,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  Text(
-                    'Congue malesuada in ac justo, a tristique \n      leo massa. Arcu leo leo urna risus.',
-                    style: TextStyles.h2NormalWhite,
-                  ),
-                  SizedBox(
-                    height: 12.h,
-                  ),
-                  CupertinoCustomButton(
-                      imgSrc: 'assets/images/pointing-to-right.png',
+                  buildWelcomeMessage(),
+                  buttonHeight,
+                  CustomButtonWithIcon(
+                      iconPath: 'assets/images/pointing-to-right.png',
                       color: AppColor.red,
-                      btnTitle: 'Get Started',
-                      onBtnPress: () => Get.offAll(const RegistrationScreen1()),
+                      title: 'Get Started',
+                      onPressed: () => Get.offAll(const RegistrationScreen1()),
                       textStyle: TextStyles.h2BoldWhite),
-                   SizedBox(
-                    height: 8.h,
-                  ),
-                  CupertinoCustomButton(
-                      imgSrc: 'assets/images/student.png',
+                  buttonHeight,
+                  CustomButtonWithIcon(
+                      iconPath: 'assets/images/student.png',
                       color: AppColor.black,
-                      btnTitle: 'I Have An Account',
-                      onBtnPress: () => Get.offAll(const LoginScreen()),
+                      title: 'I Have An Account',
+                      onPressed: () => Get.offAll(const LoginScreen()),
                       textStyle: TextStyles.h2BoldWhite),
                 ],
               ),

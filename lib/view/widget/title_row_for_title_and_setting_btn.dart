@@ -1,5 +1,9 @@
 
 
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:trackizer/view/settingsscreen/settings_screen.dart';
+
 import '../view.dart';
 
 class TitleRowForTitleAndSettingBtn extends StatelessWidget {
@@ -20,7 +24,7 @@ class TitleRowForTitleAndSettingBtn extends StatelessWidget {
           style: TextStyles.h2NormalGreyTitle,
         ),
         IconButton(
-            onPressed: () {},
+            onPressed: ()=>Get.to(const SettingsScreen()),
             icon: const Icon(
               Icons.settings,
               color: AppColor.white,
