@@ -10,7 +10,8 @@ class WelcomeScreen extends StatelessWidget {
 
   Widget buildWelcomeMessage() {
     return Text(
-      'Congue malesuada in ac justo, a tristique \n      leo massa. Arcu leo leo urna risus.',
+      'Congue malesuada in ac justo, a tristique \nleo massa. Arcu leo leo urna risus.',
+      textAlign: TextAlign.center,
       style: TextStyles.h2NormalWhite,
     );
   }
