@@ -9,25 +9,28 @@ class BudgetSleekCircularSlider extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SleekCircularSlider(
-      innerWidget: (percentage) => centerDetails,
-      appearance: CircularSliderAppearance(
-          size: 300,
-          customWidths:
-              CustomSliderWidths(handlerSize: 0, progressBarWidth: 10.0),
-          customColors: CustomSliderColors(
-            progressBarColors: [
-              AppColor.red,
-              AppColor.purple,
-              AppColor.deepBlue
-            ],
-            dotColor: Colors.white,
-            trackColor: Colors.red,
-            shadowMaxOpacity: 10.0,
-          ),
-          infoProperties: InfoProperties(bottomLabelText: 'See Your Budget')),
-      initialValue: 5,
-      onChange: (value) => (){},
+    return SizedBox(
+      height: 285.h,
+      child: SleekCircularSlider(
+        innerWidget: (percentage) => centerDetails,
+        appearance: CircularSliderAppearance(
+            size: 290.sp,
+            customWidths:
+                CustomSliderWidths(handlerSize: 0, progressBarWidth: 10.0),
+            customColors: CustomSliderColors(
+              progressBarColors: [
+                AppColor.red,
+                AppColor.purple,
+                AppColor.deepBlue
+              ],
+              dotColor: Colors.white,
+              trackColor: Colors.red,
+              shadowMaxOpacity: 0.9,
+            ),
+            infoProperties: InfoProperties(bottomLabelText: 'See Your Budget')),
+        initialValue: 5,
+        onChange: (value) => () {},
+      ),
     );
   }
 }
@@ -35,30 +38,33 @@ class BudgetSleekCircularSlider extends StatelessWidget {
 Widget centerDetails = Column(
   mainAxisAlignment: MainAxisAlignment.center,
   children: [
-    Image.asset('assets/images/logo.png'),
-    const SizedBox(
-      height: 16,
+    SizedBox(
+        height: 35.h,
+        width: 250.w,
+        child: Image.asset('assets/images/logo.png')),
+    SizedBox(
+      height: 16.h,
     ),
-    const Text(
+    Text(
       '\$1,235',
       style: TextStyles.h1BoldWhiteForPrice,
     ),
-    const SizedBox(
-      height: 16,
+    SizedBox(
+      height: 16.h,
     ),
-    const Text(
+    Text(
       'This Month Bills',
       style: TextStyles.h2NormalWhite,
     ),
-    const SizedBox(
-      height: 16,
+    SizedBox(
+      height: 16.h,
     ),
     ElevatedButton(
-      onPressed: () => Get.to(const SpendingAndBudgetScreen()),
+      onPressed: () => Get.to(SpendingAndBudgetScreen()),
       style: ElevatedButton.styleFrom(
         backgroundColor: AppColor.deepBlue,
       ),
-      child: const Text(
+      child: Text(
         'See Your Budget',
         style: TextStyles.h1BoldWhite,
       ),

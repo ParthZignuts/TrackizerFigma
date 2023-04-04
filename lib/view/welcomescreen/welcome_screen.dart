@@ -1,9 +1,19 @@
-
 import 'package:get/route_manager.dart';
 import '../view.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({Key? key}) : super(key: key);
+
+  static const bottomPadding =
+      EdgeInsets.only(bottom: 15.0, left: 5.0, right: 5.0);
+  static const buttonHeight = SizedBox(height: 12.0);
+
+  Widget buildWelcomeMessage() {
+    return Text(
+      'Congue malesuada in ac justo, a tristique \n      leo massa. Arcu leo leo urna risus.',
+      style: TextStyles.h2NormalWhite,
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -17,23 +27,25 @@ class WelcomeScreen extends StatelessWidget {
         child: Align(
             alignment: Alignment.bottomCenter,
             child: Padding(
-              padding: const EdgeInsets.only(bottom: 100),
+              padding: bottomPadding,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  const Text(
-                    'Congue malesuada in ac justo, a tristique \n      leo massa. Arcu leo leo urna risus.',
-                    style: TextStyles.h2NormalWhite,
-                  ),
-                  const SizedBox(
-                    height: 16,
-                  ),
-                  CupertinoCustomButton(imgSrc: 'assets/images/pointing-to-right.png',color: AppColor.red, btnTitle: 'Get Started', onBtnPress:()=>Get.to(const RegistrationScreen1()),textStyle: TextStyles.h2Bold),
-                  const SizedBox(
-                    height: 16,
-                  ),
-                  CupertinoCustomButton(imgSrc: 'assets/images/student.png',color: AppColor.black, btnTitle: 'I Have An Account', onBtnPress:()=>Get.to(const LoginScreen()),textStyle: TextStyles.h2Bold),
-
+                  buildWelcomeMessage(),
+                  buttonHeight,
+                  CustomButtonWithIcon(
+                      iconPath: 'assets/images/pointing-to-right.png',
+                      color: AppColor.red,
+                      title: 'Get Started',
+                      onPressed: () => Get.offAll(const RegistrationScreen1()),
+                      textStyle: TextStyles.h2BoldWhite),
+                  buttonHeight,
+                  CustomButtonWithIcon(
+                      iconPath: 'assets/images/student.png',
+                      color: AppColor.black,
+                      title: 'I Have An Account',
+                      onPressed: () => Get.offAll(const LoginScreen()),
+                      textStyle: TextStyles.h2BoldWhite),
                 ],
               ),
             )),
@@ -42,5 +54,3 @@ class WelcomeScreen extends StatelessWidget {
     );
   }
 }
-
-

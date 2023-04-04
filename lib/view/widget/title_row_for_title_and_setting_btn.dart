@@ -1,8 +1,9 @@
-
+import 'package:get/get.dart';
 import '../view.dart';
 
 class TitleRowForTitleAndSettingBtn extends StatelessWidget {
   final String title;
+
   const TitleRowForTitleAndSettingBtn({
     super.key,
     required this.title,
@@ -13,13 +14,13 @@ class TitleRowForTitleAndSettingBtn extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
-        SizedBox(width: MediaQuery.of(context).size.width * 0.1),
+        SizedBox(width: 30.w),
         Text(
           title,
           style: TextStyles.h2NormalGreyTitle,
         ),
         IconButton(
-            onPressed: () {},
+            onPressed: () => Get.to(const SettingsScreen()),
             icon: const Icon(
               Icons.settings,
               color: AppColor.white,

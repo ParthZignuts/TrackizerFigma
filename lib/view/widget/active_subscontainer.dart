@@ -13,23 +13,23 @@ class ActiveSubsContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding:  EdgeInsets.only(bottom: 8.0.sp),
         child: Column(
           children: [
             Container(
-              width: 50,
+              width: 50.w,
               decoration:  BoxDecoration(
                   border:Border(
                     top: BorderSide(
                       color: color,
-                      width: 2,
+                      width: 2.w,
                     ),
                   )
               ),
             ),
             Container(
-              width:MediaQuery.of(context).size.width * 0.3,
-              height: MediaQuery.of(context).size.height * 0.1,
+              width:100.w,
+              height: 70.h,
               decoration: BoxDecoration(
                 color: AppColor.lightBlack,
                 borderRadius: BorderRadius.circular(16.0),

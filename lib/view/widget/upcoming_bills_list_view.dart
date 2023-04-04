@@ -14,12 +14,12 @@ class UpComingBillsListView extends StatelessWidget {
         child: Column(
           children: [
             SizedBox(
-              width:200,
-              height: 200,
+              width:200.w,
+              height: 200.h,
               child: Lottie.asset(
                   'assets/lottie/107612-bouncing-ball.json'),
             ),
-            const Text('No Any Pending Bills', style: TextStyles.h2NormalWhite),
+             Text('No Any Pending Bills', style: TextStyles.h2NormalWhite),
           ],
         ),
       ),

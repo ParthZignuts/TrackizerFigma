@@ -13,17 +13,17 @@ class SelectedDateDayAndTotalBudgetContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding:  EdgeInsets.all(6.0.sp),
       child: Column(
         children: [
           Row(
             children: [
               Text(
-                calenderProvider.selectedValueOfMonth,
+                calenderProvider.selectedMonth,
                 style: TextStyles.h1BoldWhiteForPrice,
               ),
-              Spacer(),
-              const Text(
+              const Spacer(),
+               Text(
                 '\$24.98 ',
                 style: TextStyles.h1BoldWhiteForPrice,
               ),
@@ -36,7 +36,7 @@ class SelectedDateDayAndTotalBudgetContainer extends StatelessWidget {
                 style: TextStyles.h2NormalWhite,
               ),
               const Spacer(),
-              const Text(
+               Text(
                 'in upcoming bills',
                 style: TextStyles.h2NormalWhite,
               ),

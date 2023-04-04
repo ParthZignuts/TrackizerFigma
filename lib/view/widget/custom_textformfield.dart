@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
-import '../theme/app_color.dart';
+
+import '../view.dart';
 
 class CustomTextFormField extends StatelessWidget {
   final String hintText;
@@ -26,7 +26,7 @@ class CustomTextFormField extends StatelessWidget {
           borderSide: const BorderSide(color: AppColor.red),
         ),
         hintStyle: const TextStyle(color: Colors.white),
-        labelStyle: const TextStyle(color: Colors.white, fontSize: 24),
+        labelStyle: const TextStyle(color: Colors.white, fontSize: 18),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(16.0),
         ),

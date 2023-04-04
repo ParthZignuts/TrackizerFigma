@@ -1,4 +1,3 @@
-
 import '../view.dart';
 
 class BudgetOnTrackBtn extends StatelessWidget {
@@ -11,7 +10,6 @@ class BudgetOnTrackBtn extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Container(
-
         decoration: BoxDecoration(
           color: AppColor.bgBlack,
           borderRadius: BorderRadius.circular(16.0),
@@ -22,14 +20,10 @@ class BudgetOnTrackBtn extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Text(
+              Text(
                 'Your Budget Are On Track ',
                 style: TextStyles.h2NormalWhite,
               ),
-              SizedBox(
-                  height: 30,
-                  width: 30,
-                  child: Image.asset('assets/images/thumbs-up.png')),
             ],
           ),
         ),

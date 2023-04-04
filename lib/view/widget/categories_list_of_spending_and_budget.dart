@@ -33,9 +33,13 @@ class CategoriesListOfSpendingAndBudget extends StatelessWidget {
                 child: Column(
                   children: [
                     ListTile(
-                      leading: Image.asset(
-                        'assets/images/1_$index.png',
-                        color: AppColor.white,
+                      leading: SizedBox(
+                        height: 40.h,
+                        width: 40.w,
+                        child: Image.asset(
+                          'assets/images/1_$index.png',
+                          color: AppColor.white,
+                        ),
                       ),
                       trailing: Text(
                         subscriptionsPrices[index],
@@ -83,7 +87,7 @@ class CategoriesListOfSpendingAndBudget extends StatelessWidget {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          const Text(
+                           Text(
                             'Add New Category  ',
                             style: TextStyles.h2NormalWhite,
                           ),

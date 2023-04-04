@@ -1,6 +1,4 @@
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-
 import '../view.dart';
 
 class SubscriptionsitemsScrollView extends StatelessWidget {
@@ -18,30 +16,37 @@ class SubscriptionsitemsScrollView extends StatelessWidget {
     return Expanded(
       child: ListView.builder(
         itemCount: subscriptions.length,
-        shrinkWrap: true,
+        // shrinkWrap: true,
         itemBuilder: (context, index) {
           return GestureDetector(
             onTap: () {
               Get.to(DetailedSubscriptionScreen(imgScr: 'assets/images/$index.png', subTitle: '${subscriptions[index]}', subAmount:'${subscriptionsPrices[index]}'));
             },
-            child: ListTile(
-              shape: RoundedRectangleBorder(
+            child: Padding(
+              padding: const EdgeInsets.all(5.0),
+              child: Container(
+                height: 60.h,
+                decoration: BoxDecoration(
+                  color: AppColor.listTileDarkGrey,
                   borderRadius: BorderRadius.circular(16.0),
-                  side: const BorderSide(
-                    width: 5.0,
-                    color: Colors.white,
-                  )),
-              leading: SizedBox(
-                  height: 40,
-                  width: 40,
-                  child: Image.asset('assets/images/$index.png')),
-              title: Text(
-                subscriptions[index],
-                style: TextStyles.h2NormalWhite,
-              ),
-              trailing: Text(
-                subscriptionsPrices[index],
-                style: TextStyles.h2NormalWhite,
+                ),
+                child: Align(
+                  alignment: Alignment.center,
+                  child: ListTile(
+                    leading: SizedBox(
+                        height: 40.h,
+                        width: 40.w,
+                        child: Image.asset('assets/images/$index.png')),
+                    title: Text(
+                      subscriptions[index],
+                      style: TextStyles.h2NormalWhite,
+                    ),
+                    trailing: Text(
+                      subscriptionsPrices[index],
+                      style: TextStyles.h2NormalWhite,
+                    ),
+                  ),
+                ),
               ),
             ),
           );
