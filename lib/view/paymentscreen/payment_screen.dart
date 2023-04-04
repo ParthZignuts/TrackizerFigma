@@ -1,7 +1,6 @@
 import 'package:dotted_border/dotted_border.dart';
 import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
-
 import '../view.dart';
 
 class PaymentScreen extends StatelessWidget {

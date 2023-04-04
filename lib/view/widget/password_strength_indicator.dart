@@ -23,7 +23,7 @@ class PasswordStrenghtIndicator extends StatelessWidget {
                 : passStrength == 3 / 4
                     ? Colors.blue
                     : Colors.green,
-        minHeight: 8,
+        minHeight: 4,
       ),
     );
   }

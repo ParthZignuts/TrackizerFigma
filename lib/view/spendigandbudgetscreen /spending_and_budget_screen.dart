@@ -1,7 +1,7 @@
 import '../view.dart';
 // ignore: must_be_immutable
 class SpendingAndBudgetScreen extends StatelessWidget {
-   SpendingAndBudgetScreen({Key? key}) : super(key: key);
+  SpendingAndBudgetScreen({Key? key}) : super(key: key);
   List subscriptionsTitle = [
     'Auto & Transport',
     'Entertainment',
@@ -17,9 +17,9 @@ class SpendingAndBudgetScreen extends StatelessWidget {
     '\$50.99',
     '\$5.99',
   ];
+
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       backgroundColor: AppColor.bgBlack,
       body: SafeArea(

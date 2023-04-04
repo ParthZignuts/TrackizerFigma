@@ -1,5 +1,6 @@
 import '../view.dart';
 
+// ignore: must_be_immutable
 class BoxContainer extends StatelessWidget {
   BoxContainer({
     super.key,
@@ -26,6 +27,7 @@ class BoxContainer extends StatelessWidget {
   }
 }
 
+// ignore: must_be_immutable
 class InnerBoxContainer extends StatelessWidget {
   InnerBoxContainer({
     super.key,
@@ -66,7 +68,7 @@ class BoxText extends StatelessWidget {
 }
 
 class DesignLabel extends StatelessWidget {
-  DesignLabel({
+  const DesignLabel({
     super.key,
     required this.iconAsset,
     required this.label_1,

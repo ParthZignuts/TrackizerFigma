@@ -13,9 +13,9 @@ class Trackizer extends StatelessWidget {
       body: PageView(
           controller: trackizerProvider.pageController,
           children:  <Widget>[
-             HomeScreen(),
+             const HomeScreen(),
             SpendingAndBudgetScreen(),
-             CalenderScreen(),
+             const CalenderScreen(),
             const PaymentScreen(),
           ],
           onPageChanged: (int index) => {

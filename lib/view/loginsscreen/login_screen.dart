@@ -1,4 +1,3 @@
-
 import '../view.dart';
 import '../../provider/provider.dart';
 
@@ -29,7 +28,7 @@ class _LoginScreenState extends State<LoginScreen> {
         color: AppColor.black,
         child: SafeArea(
           child: Padding(
-            padding:  EdgeInsets.all(8.0.sp),
+            padding: EdgeInsets.all(16.0.sp),
             child: Column(
               children: [
                 Align(
@@ -43,7 +42,8 @@ class _LoginScreenState extends State<LoginScreen> {
 
                 const SizedBox(height: 16.0),
 
-                PasswordTextFormField(passStrengthProvider: passStrengthProvider),
+                PasswordTextFormField(
+                    passStrengthProvider: passStrengthProvider),
                 const SizedBox(
                   height: 16,
                 ),
@@ -57,11 +57,18 @@ class _LoginScreenState extends State<LoginScreen> {
                       Checkbox(
                         value: rememberMe,
                         onChanged: _onRememberMeChanged,
-                        fillColor: MaterialStateProperty.all(AppColor.redAccent),
+                        fillColor:
+                            MaterialStateProperty.all(AppColor.redAccent),
                       ),
-                       Text('Remember Me',style: TextStyles.h2NormalWhite,),
+                      Text(
+                        'Remember Me',
+                        style: TextStyles.h2NormalWhite,
+                      ),
                       const Spacer(),
-                       Text('Forgot Password',style:  TextStyles.h2NormalWhite,),
+                      Text(
+                        'Forgot Password',
+                        style: TextStyles.h2NormalWhite,
+                      ),
                     ],
                   ),
                 ),
@@ -70,11 +77,11 @@ class _LoginScreenState extends State<LoginScreen> {
                 CustomButtonWithIcon(
                     color: Colors.redAccent,
                     title: 'Sign In',
-                    onPressed: () => Get.offAll( const Trackizer()),
+                    onPressed: () => Get.offAll(const Trackizer()),
                     textStyle: TextStyles.h2NormalWhite,
                     iconPath: 'assets/images/pointing-to-right.png'),
                 const Spacer(),
-                 Text(
+                Text(
                   'If You Don\'t Have An Account Yet?',
                   style: TextStyles.h2NormalWhite,
                 ),

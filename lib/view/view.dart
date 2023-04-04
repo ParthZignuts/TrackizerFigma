@@ -32,3 +32,4 @@ export './detailedsubscriptionscreen/detailed_subscription_screen.dart';
 export  'package:flutter_screenutil/flutter_screenutil.dart';
 export './settingsscreen/settings_screen.dart';
 export './widget/subscription_allinfo.dart';
+export './widget/home_screen_persistent_header.dart';

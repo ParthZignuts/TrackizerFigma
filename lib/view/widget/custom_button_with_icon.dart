@@ -28,9 +28,9 @@ class CustomButtonWithIcon extends StatelessWidget {
           decoration: BoxDecoration(
             // backgroundBlendMode:BlendMode.softLight,
             boxShadow: [
-               BoxShadow(color: color,blurRadius: 4.0,blurStyle: BlurStyle.outer),
-               BoxShadow(color: color,blurRadius: 4.0,blurStyle: BlurStyle.inner),
-               BoxShadow(color: color,blurRadius: 4.0,blurStyle: BlurStyle.solid),
+               BoxShadow(color: color,blurRadius: 1.0,blurStyle: BlurStyle.outer),
+               BoxShadow(color: color,blurRadius: 1.0,blurStyle: BlurStyle.inner),
+               BoxShadow(color: color,blurRadius: 1.0,blurStyle: BlurStyle.solid),
             ],
             borderRadius: BorderRadius.circular(12.0),
           ),

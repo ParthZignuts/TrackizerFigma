@@ -1,6 +1,4 @@
 
-
-
 import './view/view.dart';
 import './provider/provider.dart';
 
@@ -35,7 +33,6 @@ class MyApp extends StatelessWidget {
               primarySwatch: Colors.red,
             ),
             home:  const WelcomeScreen(),
-
           );
         },
       ),

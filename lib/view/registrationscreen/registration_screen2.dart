@@ -17,7 +17,7 @@ class RegistrationScreen2 extends StatelessWidget {
         color: AppColor.black,
         child: SafeArea(
           child: Padding(
-            padding: EdgeInsets.all(8.0.sp),
+            padding: EdgeInsets.all(16.0.sp),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               children: [
@@ -60,7 +60,7 @@ class RegistrationScreen2 extends StatelessWidget {
                         ? () => Get.snackbar(
                             'Failed', 'Please Enter Valid Credentials',
                             backgroundColor: AppColor.red)
-                        : () => Get.offAll(HomeScreen()),
+                        : () => Get.offAll(const HomeScreen()),
                     textStyle: TextStyles.h2NormalWhite,
                     iconPath: 'assets/images/pointing-to-right.png'),
                 const Spacer(),

@@ -16,7 +16,7 @@ class SubscriptionsitemsScrollView extends StatelessWidget {
     return Expanded(
       child: ListView.builder(
         itemCount: subscriptions.length,
-        shrinkWrap: true,
+        // shrinkWrap: true,
         itemBuilder: (context, index) {
           return GestureDetector(
             onTap: () {

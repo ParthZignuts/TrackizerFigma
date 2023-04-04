@@ -82,14 +82,14 @@ class SettingsScreen extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             InnerBoxContainer(
-                              child_1: DesignLabel(
+                              child_1: const DesignLabel(
                                 iconAsset: 'assets/images/1_2.png',
                                 label_1: 'Security',
                               ),
                               child_2: const BoxText(label: 'FaceId'),
                             ),
                             InnerBoxContainer(
-                              child_1: DesignLabel(
+                              child_1: const DesignLabel(
                                 iconAsset: 'assets/images/cloud.png',
                                 label_1: 'iCloud Sync',
                               ),
@@ -120,20 +120,20 @@ class SettingsScreen extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             InnerBoxContainer(
-                              child_1: DesignLabel(
+                              child_1: const DesignLabel(
                                 iconAsset: 'assets/images/sort.png',
                                 label_1: 'Sorting',
                               ),
                               child_2: const BoxText(label: 'Date'),
                             ),
                             InnerBoxContainer(
-                              child_1: DesignLabel(
+                              child_1: const DesignLabel(
                                 iconAsset: 'assets/images/summery.png',
                                 label_1: 'Summery',
                               ),
                               child_2: const BoxText(label: 'Average'),
                             ), InnerBoxContainer(
-                              child_1: DesignLabel(
+                              child_1: const DesignLabel(
                                 iconAsset: 'assets/images/summery.png',
                                 label_1: 'Default currency',
                               ),
@@ -158,20 +158,20 @@ class SettingsScreen extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             InnerBoxContainer(
-                              child_1: DesignLabel(
+                              child_1: const DesignLabel(
                                 iconAsset: 'assets/images/sort.png',
                                 label_1: 'App icon',
                               ),
                               child_2: const BoxText(label: 'Default'),
                             ),
                             InnerBoxContainer(
-                              child_1: DesignLabel(
+                              child_1: const DesignLabel(
                                 iconAsset: 'assets/images/summery.png',
                                 label_1: 'Theme',
                               ),
                               child_2: const BoxText(label: 'Dark'),
                             ), InnerBoxContainer(
-                              child_1: DesignLabel(
+                              child_1: const DesignLabel(
                                 iconAsset: 'assets/images/summery.png',
                                 label_1: 'Default currency',
                               ),
