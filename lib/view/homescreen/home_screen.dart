@@ -28,7 +28,7 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             SliverPersistentHeader(
-                pinned: true,
+
                 delegate:
                 HomeScreenPersistentHeader(homeScreenProvider: homeScreenProvider)),
           ],

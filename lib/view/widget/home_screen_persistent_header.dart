@@ -5,14 +5,14 @@ class HomeScreenPersistentHeader extends SliverPersistentHeaderDelegate {
   HomeScreenPersistentHeader({required this.homeScreenProvider});
 
   final HomeScreenProvider homeScreenProvider;
-  List subscriptions = [
+  static List subscriptions = [
     'Spotify',
     'YouTube Premium',
     'Microsoft OneDrive',
     'NetFlix',
     'PhotoShop'
   ];
-  List subscriptionsPrices = [
+  static List subscriptionsPrices = [
     '\$5.99',
     '\$18.99',
     '\$29.99',
@@ -20,15 +20,17 @@ class HomeScreenPersistentHeader extends SliverPersistentHeaderDelegate {
     '\$49.98'
   ];
 
+  List<Widget> showWidgetOnSwitchTab = [
+    SubscriptionsitemsScrollView(
+        subscriptions: subscriptions,
+        subscriptionsPrices: subscriptionsPrices),
+    const UpComingBillsListView(),
+  ];
+
   @override
   Widget build(
       BuildContext context, double shrinkOffset, bool overlapsContent) {
-    List<Widget> showWidgetOnSwitchTab = [
-      SubscriptionsitemsScrollView(
-          subscriptions: subscriptions,
-          subscriptionsPrices: subscriptionsPrices),
-      const UpComingBillsListView(),
-    ];
+
     return Column(
       children: [
         Row(
