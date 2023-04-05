@@ -7,7 +7,7 @@ class CalenderScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final calenderProvider = Provider.of<CalenderScreenProvider>(context);
+    final calenderProvider = Provider.of<CalenderScreenProvider>(context,listen: false);
     List<String> datesList = calenderProvider.dates;
 
     return Scaffold(
@@ -17,12 +17,12 @@ class CalenderScreen extends StatelessWidget {
             slivers: [
               SliverAppBar(
                 backgroundColor: AppColor.bgBlack,
-                expandedHeight: 380.h,
+                expandedHeight: 340.h,
                 flexibleSpace: FlexibleSpaceBar(
                   background: Column(
                     children: [
                       Container(
-                        height: 380.h,
+                        height: 340.h,
                         decoration: const BoxDecoration(
                           color: AppColor.listTileDarkGrey,
                           borderRadius: BorderRadius.only(

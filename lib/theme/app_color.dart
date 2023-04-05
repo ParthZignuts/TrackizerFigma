@@ -35,6 +35,7 @@ class AppColor {
   static const navigationbarColor=Color(0xFF4E4E61);
 
   static const listTileDarkGrey=Color(0x334E4E61);
+  static const yellow=Color(0xFFFCCD09);
 
 
 

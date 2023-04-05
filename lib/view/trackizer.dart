@@ -12,11 +12,11 @@ class Trackizer extends StatelessWidget {
     return Scaffold(
       body: PageView(
           controller: trackizerProvider.pageController,
-          children:  <Widget>[
-             const HomeScreen(),
+          children:  const <Widget>[
+             HomeScreen(),
             SpendingAndBudgetScreen(),
-             const CalenderScreen(),
-            const PaymentScreen(),
+             CalenderScreen(),
+            PaymentScreen(),
           ],
           onPageChanged: (int index) => {
                 trackizerProvider.tabIndex = index,

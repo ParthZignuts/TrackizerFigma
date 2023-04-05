@@ -2,19 +2,19 @@ import 'package:trackizer/view/homescreen/home_screen.dart';
 import '../view.dart';
 import '../../provider/provider.dart';
 
-// ignore: camel_case_types
 class RegistrationScreen2 extends StatelessWidget {
   const RegistrationScreen2({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     TextEditingController controller = TextEditingController();
-    final passStrengthProvider = Provider.of<PasswordStrengthProvider>(context);
+    final passStrengthProvider =
+        Provider.of<PasswordStrengthProvider>(context, listen: false);
     double passStrength = passStrengthProvider.strength;
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: Container(
-        color: AppColor.black,
+        color: AppColor.bgBlack,
         child: SafeArea(
           child: Padding(
             padding: EdgeInsets.all(16.0.sp),
@@ -38,18 +38,24 @@ class RegistrationScreen2 extends StatelessWidget {
                   height: 20.h,
                 ),
                 // The strength indicator bar
-                PasswordStrenghtIndicator(passStrength: passStrength),
+                const PasswordStrenghtIndicator(),
                 const SizedBox(
                   height: 16,
                 ),
 
                 // The message about the strength of the entered password
-                Align(
-                  alignment: Alignment.topLeft,
-                  child: Text(
-                    passStrengthProvider.displayText,
-                    style: TextStyles.h2NormalWhite,
-                  ),
+                Padding(
+                  padding: EdgeInsets.only(left: 7.0.sp),
+                  child: Align(
+                      alignment: Alignment.topLeft,
+                      child: Consumer<PasswordStrengthProvider>(
+                        builder: (context, value, child) {
+                          return Text(
+                            passStrengthProvider.displayText,
+                            style: TextStyles.h2NormalWhite,
+                          );
+                        },
+                      )),
                 ),
 
                 const SizedBox(height: 16.0),

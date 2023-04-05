@@ -23,7 +23,7 @@ class SubscriptionsitemsScrollView extends StatelessWidget {
               Get.to(DetailedSubscriptionScreen(imgScr: 'assets/images/$index.png', subTitle: '${subscriptions[index]}', subAmount:'${subscriptionsPrices[index]}'));
             },
             child: Padding(
-              padding: const EdgeInsets.all(5.0),
+              padding:  EdgeInsets.only(left: 16.0.sp,right: 16.0.sp,top: 2.0.sp,bottom: 8.0.sp),
               child: Container(
                 height: 60.h,
                 decoration: BoxDecoration(

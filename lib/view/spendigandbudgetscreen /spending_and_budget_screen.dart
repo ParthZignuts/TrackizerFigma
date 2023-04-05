@@ -1,22 +1,7 @@
 import '../view.dart';
-// ignore: must_be_immutable
+
 class SpendingAndBudgetScreen extends StatelessWidget {
-  SpendingAndBudgetScreen({Key? key}) : super(key: key);
-  List subscriptionsTitle = [
-    'Auto & Transport',
-    'Entertainment',
-    'Security',
-  ];
-  List subscriptionsSubTitle = [
-    '\$375 left to spend',
-    '\$375 left to spend',
-    '\$375 left to spend',
-  ];
-  List subscriptionsPrices = [
-    '\$25.99',
-    '\$50.99',
-    '\$5.99',
-  ];
+  const SpendingAndBudgetScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -29,9 +14,11 @@ class SpendingAndBudgetScreen extends StatelessWidget {
             const SpendingAndBudgetSemiCircleGraph(),
             const BudgetOnTrackBtn(),
             CategoriesListOfSpendingAndBudget(
-                subscriptionsTitle: subscriptionsTitle,
-                subscriptionsPrices: subscriptionsPrices,
-                subscriptionsSubTitle: subscriptionsSubTitle)
+                subscriptionsTitle: Subscriptioninfo.spendingSubscriptionsTitle,
+                subscriptionsPrices:
+                    Subscriptioninfo.spendingSubscriptionsPrices,
+                subscriptionsSubTitle:
+                    Subscriptioninfo.spendingSubscriptionsSubTitle),
           ],
         ),
       ),

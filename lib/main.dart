@@ -1,8 +1,7 @@
-
 import './view/view.dart';
 import './provider/provider.dart';
 
-void main() async{
+void main() async {
   await ScreenUtil.ensureScreenSize();
   runApp(const MyApp());
 }
@@ -22,9 +21,16 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider<TrackizerScreenProvider>(
             create: (context) => TrackizerScreenProvider()),
         ChangeNotifierProvider<CalenderScreenProvider>(
-            create: (context) => CalenderScreenProvider()..getDatesWithDayNames()),
+            create: (context) =>
+                CalenderScreenProvider()..getDatesWithDayNames()),
+        ChangeNotifierProvider(
+          create: (context) => LoginScreenProvider(),
+        )
       ],
       child: ScreenUtilInit(
+        designSize: const Size(360, 690),
+        minTextAdapt: true,
+        splitScreenMode: true,
         builder: (BuildContext context, Widget? child) {
           return GetMaterialApp(
             debugShowCheckedModeBanner: false,
@@ -32,7 +38,8 @@ class MyApp extends StatelessWidget {
             theme: ThemeData(
               primarySwatch: Colors.red,
             ),
-            home:  const WelcomeScreen(),
+            home: const WelcomeScreen(),
+            // home: const Trackizer(),
           );
         },
       ),

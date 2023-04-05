@@ -4,4 +4,4 @@ export 'package:provider/provider.dart';
 export './homescreen/home_screen_provider.dart';
 export './trackizerscreen/trackizer_screen_provider.dart';
 export './calenderscreen/calenderscreen_provider.dart';
-
+export './loginscreenprovider/login_screen_provider.dart';

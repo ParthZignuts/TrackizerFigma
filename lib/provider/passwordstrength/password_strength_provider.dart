@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 
 class PasswordStrengthProvider extends ChangeNotifier {
-  late String password;
+   String password='';
   double strength = 0;
   RegExp numReg = RegExp(r".*[0-9].*");
   RegExp letterReg = RegExp(r".*[A-Za-z].*");
@@ -27,9 +27,6 @@ class PasswordStrengthProvider extends ChangeNotifier {
         strength = 3 / 4;
         displayText = 'Your password is strong';
       } else {
-        // Password length >= 8
-        // Password contains both letter and digit characters
-
         strength = 1;
         displayText = 'Your password is great';
       }

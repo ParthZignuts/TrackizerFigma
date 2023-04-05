@@ -8,10 +8,12 @@ class WelcomeScreen extends StatelessWidget {
       EdgeInsets.only(bottom: 15.0, left: 5.0, right: 5.0);
   static const buttonHeight = SizedBox(height: 12.0);
 
-  Widget buildWelcomeMessage() {
+
+  Widget welcomeMessage() {
     return Text(
-      'Congue malesuada in ac justo, a tristique \n      leo massa. Arcu leo leo urna risus.',
+      'Congue malesuada in ac justo, a tristique \n leo massa. Arcu leo leo urna risus.',
       style: TextStyles.h2NormalWhite,
+      textAlign: TextAlign.center,
     );
   }
 
@@ -31,7 +33,9 @@ class WelcomeScreen extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  buildWelcomeMessage(),
+                  SafeArea(child: Image.asset('assets/images/logo.png')),
+                  const Spacer(),
+                  welcomeMessage(),
                   buttonHeight,
                   CustomButtonWithIcon(
                       iconPath: 'assets/images/pointing-to-right.png',

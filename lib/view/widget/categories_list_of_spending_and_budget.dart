@@ -24,7 +24,7 @@ class CategoriesListOfSpendingAndBudget extends StatelessWidget {
         itemBuilder: (context, index) {
           if (index < subscriptionsTitle.length) {
             return Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding:  EdgeInsets.only(left: 12.0.sp,right: 12.0.sp,bottom: 8.0.sp,top: 8.0.sp),
               child: Container(
                 decoration: BoxDecoration(
                   color: AppColor.listTileDarkGrey,
@@ -75,25 +75,22 @@ class CategoriesListOfSpendingAndBudget extends StatelessWidget {
                 ),
               ),
               child: Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: EdgeInsets.only(left: 12.0.sp,right: 12.0.sp,bottom: 8.0.sp,top: 8.0.sp),
                 child: DottedBorder(
                   borderType: BorderType.RRect,
                   color: AppColor.lightWhite,
                   radius: const Radius.circular(16.0),
                   child: Padding(
                     padding: const EdgeInsets.all(28.0),
-                    child: Card(
-                      color: AppColor.bgBlack,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                           Text(
-                            'Add New Category  ',
-                            style: TextStyles.h2NormalWhite,
-                          ),
-                          Image.asset('assets/images/Add.png'),
-                        ],
-                      ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                         Text(
+                          'Add New Category  ',
+                          style: TextStyles.h2NormalWhite,
+                        ),
+                        Image.asset('assets/images/Add.png'),
+                      ],
                     ),
                   ),
                 ),

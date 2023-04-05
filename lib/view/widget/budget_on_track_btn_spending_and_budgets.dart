@@ -8,7 +8,8 @@ class BudgetOnTrackBtn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: EdgeInsets.only(
+          left: 12.0.sp, right: 12.0.sp, bottom: 8.0.sp, top: 8.0.sp),
       child: Container(
         decoration: BoxDecoration(
           color: AppColor.bgBlack,

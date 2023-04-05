@@ -1,7 +1,6 @@
 import '../view.dart';
 import '../../provider/provider.dart';
 
-// ignore: camel_case_types
 class RegistrationScreen1 extends StatelessWidget {
   const RegistrationScreen1({Key? key}) : super(key: key);
 
@@ -9,7 +8,7 @@ class RegistrationScreen1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        color: Colors.black,
+        color: AppColor.bgBlack,
         child: SafeArea(
           child: Padding(
             padding: EdgeInsets.all(16.0.sp),
@@ -57,8 +56,9 @@ class RegistrationScreen1 extends StatelessWidget {
                     onPressed: () => Get.offAll(const RegistrationScreen2()),
                     textStyle: TextStyles.h2NormalBlack),
                 Text(
-                  'By registering, you agree to our Terms of Use. Learn\n            how we collect, use and share your data.',
+                  'By registering, you agree to our Terms of Use. Learn\nhow we collect, use and share your data.',
                   style: TextStyles.h2NormalWhite,
+                  textAlign:TextAlign.center,
                 ),
               ],
             ),
