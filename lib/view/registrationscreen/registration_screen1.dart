@@ -58,7 +58,7 @@ class RegistrationScreen1 extends StatelessWidget {
                 Text(
                   'By registering, you agree to our Terms of Use. Learn\nhow we collect, use and share your data.',
                   style: TextStyles.h2NormalWhite,
-                  textAlign:TextAlign.center,
+                  textAlign: TextAlign.center,
                 ),
               ],
             ),

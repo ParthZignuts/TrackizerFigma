@@ -1,4 +1,3 @@
-
 import '../view.dart';
 
 class SubscriptionAllInfo extends StatelessWidget {
@@ -7,6 +6,7 @@ class SubscriptionAllInfo extends StatelessWidget {
     required this.subTitle,
     required this.title,
   });
+
   final String title;
   final String subTitle;
 

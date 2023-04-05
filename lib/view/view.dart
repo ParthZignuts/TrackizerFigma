@@ -34,3 +34,7 @@ export './settingsscreen/settings_screen.dart';
 export './widget/subscription_allinfo.dart';
 export './widget/home_screen_persistent_header.dart';
 export '../const/subscriptionsinfo.dart';
+export './widget/calender_screen_persistent_header.dart';
+export './widget/dashed_seprator_line.dart';
+export 'package:ticket_widget/ticket_widget.dart';
+export './homescreen/home_screen.dart';

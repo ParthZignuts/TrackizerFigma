@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 
 class CustomButtonWithIcon extends StatelessWidget {
-
   final Color color;
   final String title;
   final TextStyle textStyle;
@@ -15,7 +14,6 @@ class CustomButtonWithIcon extends StatelessWidget {
     required this.onPressed,
     required this.textStyle,
     required this.iconPath,
-
   });
 
   @override
@@ -23,14 +21,17 @@ class CustomButtonWithIcon extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: SizedBox(
-        width: MediaQuery.of(context).size.width*1,
+        width: MediaQuery.of(context).size.width * 1,
         child: Container(
           decoration: BoxDecoration(
             // backgroundBlendMode:BlendMode.softLight,
             boxShadow: [
-               BoxShadow(color: color,blurRadius: 1.0,blurStyle: BlurStyle.outer),
-               BoxShadow(color: color,blurRadius: 1.0,blurStyle: BlurStyle.inner),
-               BoxShadow(color: color,blurRadius: 1.0,blurStyle: BlurStyle.solid),
+              BoxShadow(
+                  color: color, blurRadius: 1.0, blurStyle: BlurStyle.outer),
+              BoxShadow(
+                  color: color, blurRadius: 1.0, blurStyle: BlurStyle.inner),
+              BoxShadow(
+                  color: color, blurRadius: 1.0, blurStyle: BlurStyle.solid),
             ],
             borderRadius: BorderRadius.circular(12.0),
           ),
@@ -40,8 +41,15 @@ class CustomButtonWithIcon extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Image.asset(iconPath,height: 20,width: 30,),
-                Text(title,style: textStyle,),
+                Image.asset(
+                  iconPath,
+                  height: 20,
+                  width: 30,
+                ),
+                Text(
+                  title,
+                  style: textStyle,
+                ),
               ],
             ),
           ),

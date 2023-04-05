@@ -8,7 +8,6 @@ class WelcomeScreen extends StatelessWidget {
       EdgeInsets.only(bottom: 15.0, left: 5.0, right: 5.0);
   static const buttonHeight = SizedBox(height: 12.0);
 
-
   Widget welcomeMessage() {
     return Text(
       'Congue malesuada in ac justo, a tristique \n leo massa. Arcu leo leo urna risus.',

@@ -1,9 +1,6 @@
 import 'package:lottie/lottie.dart';
-import 'package:ticket_widget/ticket_widget.dart';
 import 'package:trackizer/provider/provider.dart';
-
 import '../view.dart';
-import '../widget/dashed_seprator_line.dart';
 
 class DetailedSubscriptionScreen extends StatelessWidget {
   const DetailedSubscriptionScreen(

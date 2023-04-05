@@ -4,13 +4,12 @@ import '../view.dart';
 class CalenderScreenPersistentHeader extends SliverPersistentHeaderDelegate {
   CalenderScreenPersistentHeader({required this.calenderScreenProvider});
 
-  final  CalenderScreenProvider calenderScreenProvider;
+  final CalenderScreenProvider calenderScreenProvider;
 
   @override
   Widget build(
       BuildContext context, double shrinkOffset, bool overlapsContent) {
-
-    return  Column(
+    return Column(
       children: [
         SelectedDateDayAndTotalBudgetContainer(
             calenderProvider: calenderScreenProvider),
@@ -30,4 +29,3 @@ class CalenderScreenPersistentHeader extends SliverPersistentHeaderDelegate {
   @override
   double get minExtent => 0.0;
 }
-

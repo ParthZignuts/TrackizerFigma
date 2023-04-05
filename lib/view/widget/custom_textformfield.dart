@@ -1,4 +1,3 @@
-
 import '../view.dart';
 
 class CustomTextFormField extends StatelessWidget {

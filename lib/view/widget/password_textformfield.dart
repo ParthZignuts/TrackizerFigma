@@ -1,4 +1,3 @@
-
 import '../../provider/passwordstrength/password_strength_provider.dart';
 import '../view.dart';
 

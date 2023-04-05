@@ -20,10 +20,14 @@ class SubscriptionsitemsScrollView extends StatelessWidget {
         itemBuilder: (context, index) {
           return GestureDetector(
             onTap: () {
-              Get.to(DetailedSubscriptionScreen(imgScr: 'assets/images/$index.png', subTitle: '${subscriptions[index]}', subAmount:'${subscriptionsPrices[index]}'));
+              Get.to(DetailedSubscriptionScreen(
+                  imgScr: 'assets/images/$index.png',
+                  subTitle: '${subscriptions[index]}',
+                  subAmount: '${subscriptionsPrices[index]}'));
             },
             child: Padding(
-              padding:  EdgeInsets.only(left: 16.0.sp,right: 16.0.sp,top: 2.0.sp,bottom: 8.0.sp),
+              padding: EdgeInsets.only(
+                  left: 16.0.sp, right: 16.0.sp, top: 2.0.sp, bottom: 8.0.sp),
               child: Container(
                 height: 60.h,
                 decoration: BoxDecoration(

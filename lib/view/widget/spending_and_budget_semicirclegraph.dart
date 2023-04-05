@@ -23,13 +23,13 @@ class SpendingAndBudgetSemiCircleGraph extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     SizedBox(
-                      width: 130.w,
+                        width: 130.w,
                         child: Image.asset('assets/images/logo.png')),
-                     Text(
+                    Text(
                       '\$82,97',
                       style: TextStyles.h1BoldWhiteForPrice,
                     ),
-                     Text(
+                    Text(
                       'of \$2,000 budget',
                       style: TextStyles.h2NormalWhite,
                     ),

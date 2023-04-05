@@ -1,7 +1,6 @@
 import 'package:dotted_border/dotted_border.dart';
 import 'package:lottie/lottie.dart';
 import 'package:trackizer/provider/provider.dart';
-
 import '../view.dart';
 
 class CategoriesListOfSpendingAndBudget extends StatelessWidget {
@@ -24,7 +23,8 @@ class CategoriesListOfSpendingAndBudget extends StatelessWidget {
         itemBuilder: (context, index) {
           if (index < subscriptionsTitle.length) {
             return Padding(
-              padding:  EdgeInsets.only(left: 12.0.sp,right: 12.0.sp,bottom: 8.0.sp,top: 8.0.sp),
+              padding: EdgeInsets.only(
+                  left: 12.0.sp, right: 12.0.sp, bottom: 8.0.sp, top: 8.0.sp),
               child: Container(
                 decoration: BoxDecoration(
                   color: AppColor.listTileDarkGrey,
@@ -75,7 +75,8 @@ class CategoriesListOfSpendingAndBudget extends StatelessWidget {
                 ),
               ),
               child: Padding(
-                padding: EdgeInsets.only(left: 12.0.sp,right: 12.0.sp,bottom: 8.0.sp,top: 8.0.sp),
+                padding: EdgeInsets.only(
+                    left: 12.0.sp, right: 12.0.sp, bottom: 8.0.sp, top: 8.0.sp),
                 child: DottedBorder(
                   borderType: BorderType.RRect,
                   color: AppColor.lightWhite,
@@ -85,7 +86,7 @@ class CategoriesListOfSpendingAndBudget extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                         Text(
+                        Text(
                           'Add New Category  ',
                           style: TextStyles.h2NormalWhite,
                         ),

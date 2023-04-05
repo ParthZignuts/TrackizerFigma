@@ -25,54 +25,52 @@ class ListViewOfDayAndDate extends StatelessWidget {
             padding: EdgeInsets.all(8.0.sp),
             child: SizedBox(
               width: 60.w,
-              child: GestureDetector(
-                onTap: () {
-                  calenderProvider.onTapChangeVisibility(index);
-                },
-                child: Consumer<CalenderScreenProvider>(
-                  builder: (context, value, child) {
-                    return Container(
-                      alignment: Alignment.center,
-                      decoration: BoxDecoration(
-                        color: (calenderProvider.changeVisibility == index)
-                            ? AppColor.bgBlack
-                            : AppColor.listTileDarkGrey,
-                        borderRadius: BorderRadius.circular(24.0),
-                      ),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Wrap(
-                            direction: Axis.vertical,
-                            alignment: WrapAlignment.center,
-                            children: datesList[index]
-                                .split("")
-                                .map((string) =>
-                                Text(string, style: TextStyles.h2NormalWhite))
-                                .toList(),
-                          ),
-                          SizedBox(
-                            height: 10.h,
-                          ),
-                          SizedBox(
-                            height: 8.h,
-                            width: 8.w,
-                            child: Container(
-                              decoration: BoxDecoration(
-                                color: (calenderProvider.changeVisibility == index)
-                                    ? AppColor.redAccent
-                                    : Colors.transparent,
-                                shape: BoxShape.circle,
-                              ),
+              child: GestureDetector(onTap: () {
+                calenderProvider.onTapChangeVisibility(index);
+              }, child: Consumer<CalenderScreenProvider>(
+                builder: (context, value, child) {
+                  return Container(
+                    alignment: Alignment.center,
+                    decoration: BoxDecoration(
+                      color: (calenderProvider.changeVisibility == index)
+                          ? AppColor.bgBlack
+                          : AppColor.listTileDarkGrey,
+                      borderRadius: BorderRadius.circular(24.0),
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Wrap(
+                          direction: Axis.vertical,
+                          alignment: WrapAlignment.center,
+                          children: datesList[index]
+                              .split("")
+                              .map((string) =>
+                                  Text(string, style: TextStyles.h2NormalWhite))
+                              .toList(),
+                        ),
+                        SizedBox(
+                          height: 10.h,
+                        ),
+                        SizedBox(
+                          height: 8.h,
+                          width: 8.w,
+                          child: Container(
+                            decoration: BoxDecoration(
+                              color:
+                                  (calenderProvider.changeVisibility == index)
+                                      ? AppColor.redAccent
+                                      : Colors.transparent,
+                              shape: BoxShape.circle,
                             ),
                           ),
-                        ],
-                      ),
-                    );
-                  },
-                )
-              ),
+                        ),
+                      ],
+                    ),
+                  );
+                },
+              )),
             ),
           );
         },

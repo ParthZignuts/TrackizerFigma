@@ -7,12 +7,13 @@ class BudgetSleekCircularSlider extends StatelessWidget {
     super.key,
   });
 
-  static final listOfColor=[
+  static final listOfColor = [
     AppColor.green,
     AppColor.darkPurple,
     AppColor.redAccent,
     AppColor.cyan,
   ];
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -24,7 +25,6 @@ class BudgetSleekCircularSlider extends StatelessWidget {
             customWidths:
                 CustomSliderWidths(handlerSize: 0, progressBarWidth: 10.0),
             customColors: CustomSliderColors(
-
               hideShadow: true,
               trackColors: listOfColor,
               progressBarColors: listOfColor,

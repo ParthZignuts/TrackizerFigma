@@ -1,16 +1,15 @@
 import '../../provider/provider.dart';
 import '../view.dart';
 
-// ignore: must_be_immutable
 class HomeScreen extends StatelessWidget {
-   const HomeScreen({Key? key}) : super(key: key);
+  const HomeScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     final homeScreenProvider = Provider.of<HomeScreenProvider>(context);
     return Scaffold(
       backgroundColor: AppColor.bgBlack,
-      body:SafeArea(
+      body: SafeArea(
         child: CustomScrollView(
           slivers: [
             SliverAppBar(
@@ -29,12 +28,11 @@ class HomeScreen extends StatelessWidget {
             ),
             SliverPersistentHeader(
                 pinned: true,
-                delegate:
-                HomeScreenPersistentHeader(homeScreenProvider: homeScreenProvider)),
+                delegate: HomeScreenPersistentHeader(
+                    homeScreenProvider: homeScreenProvider)),
           ],
         ),
       ),
     );
   }
 }
-

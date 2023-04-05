@@ -1,7 +1,8 @@
 import '../view.dart';
 
 class DashedSepratorLine extends StatelessWidget {
-  const DashedSepratorLine({Key? key, this.height = 1, this.color = AppColor.navigationbarColor})
+  const DashedSepratorLine(
+      {Key? key, this.height = 1, this.color = AppColor.navigationbarColor})
       : super(key: key);
   final double height;
   final Color color;

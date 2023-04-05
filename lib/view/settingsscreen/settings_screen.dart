@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:trackizer/view/widget/box_design.dart';
-
 import '../view.dart';
 
 class SettingsScreen extends StatelessWidget {
@@ -75,7 +74,8 @@ class SettingsScreen extends StatelessWidget {
                         )),
                   ),
                   Padding(
-                    padding:  EdgeInsets.only(top: 0.0,left: 8.0.sp,right: 8.0.sp,bottom: 8.0.sp),
+                    padding: EdgeInsets.only(
+                        top: 0.0, left: 8.0.sp, right: 8.0.sp, bottom: 8.0.sp),
                     child: BoxContainer(
                         height: 120.h,
                         child: Column(
@@ -113,7 +113,8 @@ class SettingsScreen extends StatelessWidget {
                         )),
                   ),
                   Padding(
-                    padding:  EdgeInsets.only(top: 0.0,left: 8.0.sp,right: 8.0.sp,bottom: 8.0.sp),
+                    padding: EdgeInsets.only(
+                        top: 0.0, left: 8.0.sp, right: 8.0.sp, bottom: 8.0.sp),
                     child: BoxContainer(
                         height: 175.h,
                         child: Column(
@@ -132,7 +133,8 @@ class SettingsScreen extends StatelessWidget {
                                 label_1: 'Summery',
                               ),
                               child_2: const BoxText(label: 'Average'),
-                            ), InnerBoxContainer(
+                            ),
+                            InnerBoxContainer(
                               child_1: const DesignLabel(
                                 iconAsset: 'assets/images/summery.png',
                                 label_1: 'Default currency',
@@ -141,7 +143,8 @@ class SettingsScreen extends StatelessWidget {
                             ),
                           ],
                         )),
-                  ), Padding(
+                  ),
+                  Padding(
                     padding: const EdgeInsets.only(left: 8.0),
                     child: Align(
                         alignment: Alignment.topLeft,
@@ -151,7 +154,8 @@ class SettingsScreen extends StatelessWidget {
                         )),
                   ),
                   Padding(
-                    padding:  EdgeInsets.only(top: 0.0,left: 8.0.sp,right: 8.0.sp,bottom: 8.0.sp),
+                    padding: EdgeInsets.only(
+                        top: 0.0, left: 8.0.sp, right: 8.0.sp, bottom: 8.0.sp),
                     child: BoxContainer(
                         height: 175.h,
                         child: Column(
@@ -170,7 +174,8 @@ class SettingsScreen extends StatelessWidget {
                                 label_1: 'Theme',
                               ),
                               child_2: const BoxText(label: 'Dark'),
-                            ), InnerBoxContainer(
+                            ),
+                            InnerBoxContainer(
                               child_1: const DesignLabel(
                                 iconAsset: 'assets/images/summery.png',
                                 label_1: 'Default currency',
@@ -184,7 +189,6 @@ class SettingsScreen extends StatelessWidget {
               ),
             ),
           ),
-
         ],
       ),
     );
